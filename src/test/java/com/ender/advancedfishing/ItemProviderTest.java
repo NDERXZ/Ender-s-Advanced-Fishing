@@ -414,13 +414,13 @@ public class ItemProviderTest {
     @Test
     public void testMythicTierAndConfigurableColors() {
         // 1. Verify Mythic Fish Tier properties
-        assertEquals("Mistik", CustomFish.FishTier.MYTHIC.getDisplayName());
+        assertEquals("Mythic", CustomFish.FishTier.MYTHIC.getDisplayName());
         assertEquals(8.0, CustomFish.FishTier.MYTHIC.getPriceMultiplier(), 0.001);
         assertEquals("§c", CustomFish.FishTier.MYTHIC.getDefaultColor());
         assertEquals("§c", CustomFish.FishTier.MYTHIC.getColor());
 
         // 2. Verify Mythic Rod Tier properties
-        assertEquals("Mistik", FishingRod.RodTier.MYTHIC.getDisplayName());
+        assertEquals("Mythic", FishingRod.RodTier.MYTHIC.getDisplayName());
         assertEquals(4.0, FishingRod.RodTier.MYTHIC.getCatchRateMultiplier(), 0.001);
         assertEquals(5, FishingRod.RodTier.MYTHIC.getTierBoost());
         assertEquals("§c", FishingRod.RodTier.MYTHIC.getDefaultColor());

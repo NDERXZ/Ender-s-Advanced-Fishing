@@ -18,7 +18,7 @@ public class TierLockingAndProtectionTest {
         assertNotNull(CustomFish.FishTier.SECRET);
         assertEquals("§4", CustomFish.FishTier.SECRET.getDefaultColor());
         assertEquals(15.0, CustomFish.FishTier.SECRET.getPriceMultiplier(), 0.01);
-        assertEquals("Rahasia", CustomFish.FishTier.SECRET.getDisplayName());
+        assertEquals("Secret", CustomFish.FishTier.SECRET.getDisplayName());
 
         assertNotNull(FishingRod.RodTier.SECRET);
         assertEquals("§4", FishingRod.RodTier.SECRET.getDefaultColor());

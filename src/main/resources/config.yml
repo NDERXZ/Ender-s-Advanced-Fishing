@@ -122,8 +122,8 @@ events:
 # Material dan custom_model_data berfungsi sebagai fallback jika plugin tekstur tidak tersedia
 event_fish:
   event_ancient_leviathan:
-    name: "Leviathan Kuno"
-    description: "Predator tertua yang pernah berenang di lautan primordial"
+    name: "Ancient Leviathan"
+    description: "The oldest apex predator to ever roam primordial waters"
     material: PUFFERFISH
     custom_model_data: 4001
     min_weight: 5000.0
@@ -135,8 +135,8 @@ event_fish:
     event_types: [LEVIATHAN_HUNT]
     
   event_kraken_king:
-    name: "Raja Kraken"
-    description: "Penguasa lautan dalam dengan tentakel yang dapat meremukkan kapal"
+    name: "Kraken King"
+    description: "Monarch of the deep whose colossal tentacles can crush galleons"
     material: PUFFERFISH
     custom_model_data: 4002
     min_weight: 4000.0
@@ -148,8 +148,8 @@ event_fish:
     event_types: [LEVIATHAN_HUNT]
     
   event_poseidon_wrath:
-    name: "Murka Poseidon"
-    description: "Ikan yang dikatakan sebagai utusan dewa laut"
+    name: "Poseidon's Wrath"
+    description: "A sacred emissary carrying the boundless fury of the ocean deity"
     material: PUFFERFISH
     custom_model_data: 4003
     min_weight: 2000.0
@@ -161,8 +161,8 @@ event_fish:
     event_types: [ANCIENT_GUARDIAN]
     
   event_atlantean_guardian:
-    name: "Penjaga Atlantis"
-    description: "Makhluk mistis yang konon menjaga reruntuhan kota yang tenggelam"
+    name: "Atlantean Guardian"
+    description: "Mythical sentinel guarding sunken ruins of the submerged empire"
     material: PUFFERFISH
     custom_model_data: 4004
     min_weight: 3000.0
@@ -174,8 +174,8 @@ event_fish:
     event_types: [ANCIENT_GUARDIAN]
     
   event_abyssal_nightmare:
-    name: "Mimpi Buruk Palung"
-    description: "Makhluk dari kedalaman tergelap yang tidak pernah melihat cahaya"
+    name: "Abyssal Nightmare"
+    description: "An eldritch entity from lightless trenches that has never seen dawn"
     material: PUFFERFISH
     custom_model_data: 4005
     min_weight: 1500.0
@@ -187,8 +187,8 @@ event_fish:
     event_types: [ABYSSAL_HORROR]
     
   event_deep_one:
-    name: "Penghuni Palung"
-    description: "Makhluk kuno yang hidup di tekanan air yang dapat meremukkan tulang"
+    name: "The Deep One"
+    description: "An ancient dweller thriving under bone-crushing bathypelagic pressure"
     material: PUFFERFISH
     custom_model_data: 4006
     min_weight: 2000.0
@@ -202,8 +202,8 @@ event_fish:
   # Add more event fish for other event types...
 
   event_river_colossus:
-    name: "Kolosal Sungai"
-    description: "Ikan air tawar terbesar yang pernah ditemukan"
+    name: "River Colossus"
+    description: "The most immense freshwater leviathan ever documented"
     material: PUFFERFISH
     custom_model_data: 4007
     min_weight: 800.0
@@ -215,8 +215,8 @@ event_fish:
     event_types: [RIVER_TITAN]
 
   event_freshwater_behemoth:
-    name: "Behemoth Air Tawar"
-    description: "Predator ganas yang telah memakan segala yang ada di sungai selama berabad-abad"
+    name: "Freshwater Behemoth"
+    description: "Voracious apex predator dominating inland river deltas for centuries"
     material: PUFFERFISH
     custom_model_data: 4008
     min_weight: 1000.0

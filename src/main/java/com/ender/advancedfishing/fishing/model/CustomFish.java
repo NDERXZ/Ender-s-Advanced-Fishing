@@ -22,13 +22,13 @@ import com.ender.advancedfishing.util.TextUtil;
 public class CustomFish {
     // Definisikan tier ikan
     public enum FishTier {
-        COMMON("§7", 1.0, "Biasa"),
-        UNCOMMON("§a", 1.5, "Tidak Biasa"),
-        RARE("§9", 2.0, "Langka"),
-        EPIC("§5", 3.0, "Epik"),
-        LEGENDARY("§6", 5.0, "Legendaris"),
-        MYTHIC("§c", 8.0, "Mistik"),
-        SECRET("§4", 15.0, "Rahasia");
+        COMMON("§7", 1.0, "Common"),
+        UNCOMMON("§a", 1.5, "Uncommon"),
+        RARE("§9", 2.0, "Rare"),
+        EPIC("§5", 3.0, "Epic"),
+        LEGENDARY("§6", 5.0, "Legendary"),
+        MYTHIC("§c", 8.0, "Mythic"),
+        SECRET("§4", 15.0, "Secret");
         
         private final String defaultColor;
         private final double priceMultiplier;
@@ -278,10 +278,10 @@ public class CustomFish {
         
         List<String> lore = new ArrayList<>();
         lore.add(TextUtil.color("&8────────────────────"));
-        lore.add(TextUtil.color("&7ʙᴇʀᴀᴛ: &f" + getFormattedWeight()));
-        lore.add(TextUtil.color("&7ᴋᴜᴀʟɪᴛᴀs: &f" + quality + " / 100"));
+        lore.add(TextUtil.color("&7ᴡᴇɪɢʜᴛ: &f" + getFormattedWeight()));
+        lore.add(TextUtil.color("&7ǫᴜᴀʟɪᴛʏ: &f" + quality + " / 100"));
         lore.add(TextUtil.color("&7ᴛɪᴇʀ: ") + TextUtil.tierGradient(tier, tier.name()));
-        lore.add(TextUtil.color("&7ɴɪʟᴀɪ: &b" + String.format(java.util.Locale.US, "%.2f", getPrice())));
+        lore.add(TextUtil.color("&7ᴠᴀʟᴜᴇ: &a$" + String.format(java.util.Locale.US, "%.2f", getPrice())));
         lore.add(TextUtil.color("&8────────────────────"));
         if (description != null && !description.isEmpty()) {
             lore.add(TextUtil.color("&8" + description));

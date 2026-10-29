@@ -140,7 +140,7 @@ public class JournalGUI extends GUI {
                         .lore(
                             TextUtil.color("&8────────────────────"),
                             TextUtil.color("&7sᴛᴀᴛᴜs: &aᴅɪᴛᴇᴍᴜᴋᴀɴ"),
-                            TextUtil.color("&7ᴛᴏᴛᴀʟ ᴛᴀɴɢᴋᴀᴘᴀɴ: &f" + totalCaught),
+                            TextUtil.color("&7ᴛᴏᴛᴀʟ ᴄᴀᴜɢʜᴛ: &f" + totalCaught),
                             TextUtil.color("&7ʙᴏʙᴏᴛ ᴛᴇʀʙᴇsᴀʀ: &b" + String.format(Locale.US, "%.2f", weight) + " ᴋɢ"),
                             TextUtil.color("&7ᴋᴜᴀʟɪᴛᴀs ᴛᴇʀʙᴀɪᴋ: &e" + quality + " / 100"),
                             TextUtil.color("&7ᴘᴇʀᴛᴀᴍᴀ ᴋᴀʟɪ: &7" + firstDate),
@@ -154,7 +154,7 @@ public class JournalGUI extends GUI {
                         .name(TextUtil.color("&8[ &7??? &8]"))
                         .lore(
                             TextUtil.color("&8────────────────────"),
-                            TextUtil.color("&7sᴛᴀᴛᴜs: &cʙᴇʟᴜᴍ ᴅɪᴛᴇᴍᴜᴋᴀɴ"),
+                            TextUtil.color("&7sᴛᴀᴛᴜs: &cᴜɴᴅɪsᴄᴏᴠᴇʀᴇᴅ"),
                             TextUtil.color("&7ᴛɪᴇʀ: &7" + TextUtil.toSmallCaps(currentTier.name())),
                             TextUtil.color("&7ᴘᴇᴛᴜɴᴊᴜᴋ: &fPancing di perairan untuk menemukan spesies ini."),
                             TextUtil.color("&8────────────────────")

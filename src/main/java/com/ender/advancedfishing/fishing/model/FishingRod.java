@@ -25,8 +25,8 @@ public class FishingRod {
         ADVANCED("§9", 1.5, 2, "Mahir"),
         EXPERT("§5", 2.0, 3, "Expert"),
         MASTER("§6", 3.0, 4, "Master"),
-        MYTHIC("§c", 4.0, 5, "Mistik"),
-        SECRET("§4", 5.0, 6, "Rahasia");
+        MYTHIC("§c", 4.0, 5, "Mythic"),
+        SECRET("§4", 5.0, 6, "Secret");
         
         private final String defaultColor;
         private final double catchRateMultiplier;
@@ -178,23 +178,23 @@ public class FishingRod {
         List<String> lore = new ArrayList<>();
         lore.add("§8" + description);
         lore.add("");
-        lore.add("§7Ketahanan: §f" + currentDurability + "/" + durability);
-        lore.add("§7Stamina: §f" + (staminaModifier < 1.0 ? 
+        lore.add("§7Durability: §f" + currentDurability + "/" + durability);
+        lore.add("§7Stamina Consumption: §f" + (staminaModifier < 1.0 ? 
                 "-" + (int)((1.0 - staminaModifier) * 100) + "%" : 
                 "+" + (int)((staminaModifier - 1.0) * 100) + "%"));
         lore.add("§7Tier: " + tier.getColor() + tier.getDisplayName());
         lore.add("§7Quality Boost: §f+" + (int)((getQualityBoost() - 1.0) * 100) + "%");
         lore.add("§7Lure: §f" + lureLevel);
-        lore.add("§7Kapasitas Berat: §f" + formatWeight(maxWeightCapacity));
+        lore.add("§7Weight Capacity: §f" + formatWeight(maxWeightCapacity));
         if (allowedTiers != null && !allowedTiers.isEmpty()) {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < allowedTiers.size(); i++) {
                 if (i > 0) sb.append("§7, ");
                 sb.append(allowedTiers.get(i).getColor()).append(com.ender.advancedfishing.util.TextUtil.toSmallCaps(allowedTiers.get(i).name()));
             }
-            lore.add("§7Tangkapan: " + sb);
+            lore.add("§7Allowed Catches: " + sb);
         } else {
-            lore.add("§7Tangkapan: §f" + com.ender.advancedfishing.util.TextUtil.toSmallCaps("Semua"));
+            lore.add("§7Tangkapan: §f" + com.ender.advancedfishing.util.TextUtil.toSmallCaps("All"));
         }
         lore.add("");
         if (hasSpecialAbility && specialAbilityDescription != null && !specialAbilityDescription.isBlank()) {
@@ -254,7 +254,7 @@ public class FishingRod {
         lore.add("§8" + description);
         lore.add("");
         lore.add("§7Ketahanan: §f" + durability);
-        lore.add("§7Stamina: §f" + (staminaModifier < 1.0 ? 
+        lore.add("§7Stamina Consumption: §f" + (staminaModifier < 1.0 ? 
                 "-" + (int)((1.0 - staminaModifier) * 100) + "%" : 
                 "+" + (int)((staminaModifier - 1.0) * 100) + "%"));
         lore.add("");

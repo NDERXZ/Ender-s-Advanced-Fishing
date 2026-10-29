@@ -55,7 +55,7 @@ public class ItemProtectionListener implements Listener {
             Player player = event.getPlayer();
             player.spigot().sendMessage(net.md_5.bungee.api.ChatMessageType.ACTION_BAR, 
                 net.md_5.bungee.api.chat.TextComponent.fromLegacyText(
-                    TextUtil.color("&c« ɪᴛᴇᴍ ᴛᴇʀʟɪɴᴅᴜɴɢɪ: ɪᴋᴀɴ ɪɴɪ ᴛᴇʀʟᴀʟᴜ ʙᴇʀʜᴀʀɢᴀ ᴜɴᴛᴜᴋ ᴅɪᴍᴀᴋᴀɴ! »")
+                    TextUtil.color("&c« ɪᴛᴇᴍ ᴘʀᴏᴛᴇᴄᴛᴇᴅ: ᴛʜɪs ғɪsʜ ɪs ᴛᴏᴏ ᴠᴀʟᴜᴀʙʟᴇ ᴛᴏ ᴇᴀᴛ! »")
                 )
             );
         }
@@ -73,7 +73,7 @@ public class ItemProtectionListener implements Listener {
                 Player player = event.getPlayer();
                 player.spigot().sendMessage(net.md_5.bungee.api.ChatMessageType.ACTION_BAR, 
                     net.md_5.bungee.api.chat.TextComponent.fromLegacyText(
-                        TextUtil.color("&c« ɪᴛᴇᴍ ᴛᴇʀʟɪɴᴅᴜɴɢɪ: ɪᴋᴀɴ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴅɪᴍᴀsᴀᴋ ᴅɪ ᴀᴘɪ ᴜɴɢɢᴜɴ! »")
+                        TextUtil.color("&c« ɪᴛᴇᴍ ᴘʀᴏᴛᴇᴄᴛᴇᴅ: ғɪsʜ ᴄᴀɴɴᴏᴛ ʙᴇ ᴄᴏᴏᴋᴇᴅ ᴏɴ ᴀ ᴄᴀᴍᴘғɪʀᴇ! »")
                     )
                 );
             }
@@ -88,7 +88,7 @@ public class ItemProtectionListener implements Listener {
             Player player = event.getPlayer();
             player.spigot().sendMessage(net.md_5.bungee.api.ChatMessageType.ACTION_BAR, 
                 net.md_5.bungee.api.chat.TextComponent.fromLegacyText(
-                    TextUtil.color("&c« ɪᴛᴇᴍ ᴛᴇʀʟɪɴᴅᴜɴɢɪ: ɪᴋᴀɴ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴅɪʟᴇᴛᴀᴋᴋᴀɴ sᴇʙᴀɢᴀɪ ʙʟᴏᴋ! »")
+                    TextUtil.color("&c« ɪᴛᴇᴍ ᴘʀᴏᴛᴇᴄᴛᴇᴅ: ғɪsʜ ᴄᴀɴɴᴏᴛ ʙᴇ ᴘʟᴀᴄᴇᴅ ᴀs ᴀ ʙʟᴏᴄᴋ! »")
                 )
             );
         }
@@ -116,7 +116,7 @@ public class ItemProtectionListener implements Listener {
                 if (event.getWhoClicked() instanceof Player player) {
                     player.spigot().sendMessage(net.md_5.bungee.api.ChatMessageType.ACTION_BAR, 
                         net.md_5.bungee.api.chat.TextComponent.fromLegacyText(
-                            TextUtil.color("&c« ɪᴛᴇᴍ ᴛᴇʀʟɪɴᴅᴜɴɢɪ: ɪᴋᴀɴ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴅɪᴊᴀᴅɪᴋᴀɴ ʙᴀʜᴀɴ ᴄʀᴀғᴛɪɴɢ! »")
+                            TextUtil.color("&c« ɪᴛᴇᴍ ᴘʀᴏᴛᴇᴄᴛᴇᴅ: ғɪsʜ ᴄᴀɴɴᴏᴛ ʙᴇ ᴜsᴇᴅ ᴀs ᴀ ᴄʀᴀғᴛɪɴɢ ɪɴɢʀᴇᴅɪᴇɴᴛ! »")
                         )
                     );
                 }
@@ -160,7 +160,7 @@ public class ItemProtectionListener implements Listener {
                 if (event.getWhoClicked() instanceof Player player) {
                     player.spigot().sendMessage(net.md_5.bungee.api.ChatMessageType.ACTION_BAR, 
                         net.md_5.bungee.api.chat.TextComponent.fromLegacyText(
-                            TextUtil.color("&c« ɪᴛᴇᴍ ᴛᴇʀʟɪɴᴅᴜɴɢɪ: ɪᴋᴀɴ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴅɪᴍᴀsᴀᴋ ᴀᴛᴀᴜ ᴅɪʙᴀᴋᴀʀ! »")
+                            TextUtil.color("&c« ɪᴛᴇᴍ ᴘʀᴏᴛᴇᴄᴛᴇᴅ: ғɪsʜ ᴄᴀɴɴᴏᴛ ʙᴇ sᴍᴇʟᴛᴇᴅ ᴏʀ ᴄᴏᴏᴋᴇᴅ! »")
                         )
                     );
                 }
@@ -170,7 +170,7 @@ public class ItemProtectionListener implements Listener {
             if (event.getWhoClicked() instanceof Player player) {
                 player.spigot().sendMessage(net.md_5.bungee.api.ChatMessageType.ACTION_BAR, 
                     net.md_5.bungee.api.chat.TextComponent.fromLegacyText(
-                        TextUtil.color("&c« ɪᴛᴇᴍ ᴛᴇʀʟɪɴᴅᴜɴɢɪ: ɪᴋᴀɴ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴅɪᴍᴀsᴀᴋ ᴀᴛᴀᴜ ᴅɪʙᴀᴋᴀʀ! »")
+                        TextUtil.color("&c« ɪᴛᴇᴍ ᴘʀᴏᴛᴇᴄᴛᴇᴅ: ғɪsʜ ᴄᴀɴɴᴏᴛ ʙᴇ sᴍᴇʟᴛᴇᴅ ᴏʀ ᴄᴏᴏᴋᴇᴅ! »")
                     )
                 );
             }

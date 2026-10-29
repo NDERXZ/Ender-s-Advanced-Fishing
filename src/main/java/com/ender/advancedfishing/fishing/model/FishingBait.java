@@ -78,19 +78,18 @@ public class FishingBait {
         List<String> lore = new java.util.ArrayList<>();
         lore.add("§8" + description);
         lore.add("");
-        lore.add("§e§l✦ Efek Umpan:");
-        lore.add("  §7• Daya tarik: §a+" + (int)((attractionModifier - 1.0) * 100) + "%");
-        lore.add("  §7• Boost kualitas: §a+" + (int)((qualityBoost - 1.0) * 100) + "%");
-        lore.add("  §7• Boost berat: §a+" + (int)((weightBoost - 1.0) * 100) + "%"); 
-        lore.add("  §7• Tier boost: §a+" + (tierBoost * 2) + " §7tingkat");
+        lore.add("§e§l✦ Bait Effects:");
+        lore.add("  §7• Attraction Rate: §a+" + (int)((attractionModifier - 1.0) * 100) + "%");
+        lore.add("  §7• Quality Boost: §a+" + (int)((qualityBoost - 1.0) * 100) + "%");
+        lore.add("  §7• Weight Boost: §a+" + (int)((weightBoost - 1.0) * 100) + "%"); 
+        lore.add("  §7• Tier Promotion: §a+" + (tierBoost * 2) + " §7tiers");
         lore.add("");
-        lore.add("§b§l✦ Ikan Target:");
-        lore.add("  §7" + (validFish == null || validFish.isEmpty() ? "Semua ikan" : formatFishNames(validFish)));
-        lore.add("  §7(§dBonus 10x §7untuk ikan yang sesuai)");
+        lore.add("§b§l✦ Target Species:");
+        lore.add("  §7" + (validFish == null || validFish.isEmpty() ? "All species" : formatFishNames(validFish)));
+        lore.add("  §7(§d10x Bonus §7for target species)");
         lore.add("");
-        lore.add("§7Sisa penggunaan: §e" + usesPerItem + "/" + usesPerItem);
+        lore.add("§7Remaining Uses: §e" + usesPerItem + "/" + usesPerItem);
         lore.add("§8ID: " + id);
-
         ItemStack baitItem = new ItemBuilder(material != null ? material : Material.WHEAT_SEEDS)
                 .name("§a" + name)
                 .lore(lore)
@@ -117,7 +116,7 @@ public class FishingBait {
     }
 
     private String formatFishNames(List<String> fishIds) {
-        if (fishIds == null || fishIds.isEmpty()) return "Semua ikan";
+        if (fishIds == null || fishIds.isEmpty()) return "All species";
         List<String> names = new java.util.ArrayList<>();
         if (EndersAdvancedFishing.getInstance() != null && EndersAdvancedFishing.getInstance().getConfigManager() != null) {
             Map<String, CustomFish> fishes = EndersAdvancedFishing.getInstance().getConfigManager().getCustomFishes();

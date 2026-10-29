@@ -11,7 +11,7 @@ admin_rewards:
   default:
     commands:
       - "give %player% diamond 1"
-      - "tell %player% Terima kasih telah membuat lokasi memancing baru!"
+      - "tell %player% Thank you for creating a new fishing ground!"
     money: 5000
     exp: 500
     
@@ -37,7 +37,7 @@ admin_rewards:
 # Server-wide rewards - announced and potentially available to all players
 server_rewards:
   enable: true
-  announce_message: "§a§l[LOKASI BARU] §f%admin% telah membuat lokasi memancing baru: §b%location_name%§f di §e%x%§f, §e%z%"
+  announce_message: "§a§l[NEW FISHING GROUND] §f%admin% created a new fishing spot: §b%location_name%§f at §e%x%§f, §e%z%"
   teleport_command: "/eaf location tp %location_id%"
   broadcast_commands:
-    - "broadcast Server memiliki lokasi memancing baru! Gunakan /eaf location tp %location_id% untuk mengunjunginya!"
+    - "broadcast A new fishing ground is open! Type /eaf location tp %location_id% to visit!"

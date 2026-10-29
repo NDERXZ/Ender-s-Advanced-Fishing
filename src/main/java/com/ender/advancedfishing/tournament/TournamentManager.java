@@ -310,7 +310,7 @@ public class TournamentManager {
         }
         
         // Umumkan pembatalan turnamen
-        Bukkit.broadcastMessage("§c§l[TURNAMEN] §fTurnamen §b" + activeTournament.getName() + " §fdibatalkan!");
+        Bukkit.broadcastMessage("§c§l[TURNAMEN] §fTournament §b" + activeTournament.getName() + " §fhas been cancelled!");
         
         // Reset turnamen aktif
         activeTournament = null;
@@ -562,7 +562,7 @@ public class TournamentManager {
         List<TournamentEntry> leaderboard = getLeaderboard();
         if (leaderboard.isEmpty()) {
             if (isFinal) {
-                Bukkit.broadcastMessage("§e§l[TURNAMEN SELESAI] §fTidak ada peserta yang berpartisipasi dalam turnamen.");
+                Bukkit.broadcastMessage("§e§l[TURNAMEN SELESAI] §fNo participants entered the fishing tournament.");
             }
             return;
         }

@@ -78,11 +78,11 @@ public class StrikeMinigame {
         player.playSound(player.getLocation(), Sound.ENTITY_FISHING_BOBBER_SPLASH, 1.0f, 1.0f);
         
         player.sendTitle(
-            TextUtil.oceanic("ɪᴋᴀɴ ᴍᴇɴɢɢɪɢɪᴛ!"), 
-            TextUtil.color("&7ᴛᴀʀɪᴋ sᴇɴᴀʀ: &8[ &b0 &7/ &e" + clicks + " &8] &8| &7ᴛᴇʀsɪsᴀ &f" + clicks + " ᴋʟɪᴋ"), 
+            TextUtil.oceanic("ғɪsʜ ʙɪᴛɪɴɢ!"), 
+            TextUtil.color("&7ʀᴇᴇʟ ʟɪɴᴇ: &8[ &b0 &7/ &e" + clicks + " &8] &8| &f" + clicks + " ᴄʟɪᴄᴋs ʟᴇғᴛ"), 
             5, 30, 5
         );
-        sendActionBarMessage(player, TextUtil.oceanic("« ᴛᴀʀɪᴋ sᴇɴᴀʀ (ᴋʟɪᴋ): " + clicks + " ᴋᴀʟɪ »"));
+        sendActionBarMessage(player, TextUtil.oceanic("« ʀᴇᴇʟ ʟɪɴᴇ (ᴄʟɪᴄᴋ): " + clicks + " ʟᴇғᴛ »"));
         
         updateProgressDisplay(player, MAX_TIME_SECONDS);
         
@@ -136,7 +136,7 @@ public class StrikeMinigame {
         int remaining = Math.max(0, requiredClicksCount - currentClickCount);
         
         player.playSound(player.getLocation(), Sound.BLOCK_CHAIN_STEP, 0.6f, 1.2f);
-        sendActionBarMessage(player, TextUtil.oceanic("« ᴛᴀʀɪᴋ sᴇɴᴀʀ (ᴋʟɪᴋ): sɪsᴀ " + remaining + " ᴋᴀʟɪ »"));
+        sendActionBarMessage(player, TextUtil.oceanic("« ʀᴇᴇʟ ʟɪɴᴇ (ᴄʟɪᴄᴋ): " + remaining + " ʟᴇғᴛ »"));
         updateProgressDisplay(player, 10);
         return true;
     }
@@ -244,8 +244,8 @@ public class StrikeMinigame {
         } else {
             player.playSound(player.getLocation(), Sound.ENTITY_ITEM_BREAK, 1.0f, 1.0f);
             player.sendTitle(
-                TextUtil.color("&c[ ɪᴋᴀɴ ʟᴇᴘᴀs ]"), 
-                TextUtil.color("&7sᴇɴᴀʀ ᴋᴇɴᴅᴜʀ ᴀᴛᴀᴜ ᴡᴀᴋᴛᴜ ʜᴀʙɪs"), 
+                TextUtil.color("&c[ ғɪsʜ ᴇsᴄᴀᴘᴇᴅ ]"), 
+                TextUtil.color("&7ʟɪɴᴇ sɴᴀᴘᴘᴇᴅ ᴏʀ ᴛɪᴍᴇ ᴇxᴘɪʀᴇᴅ"), 
                 10, 40, 10
             );
             
@@ -275,7 +275,7 @@ public class StrikeMinigame {
         endMinigame(player, false);
         player.playSound(player.getLocation(), Sound.ENTITY_SALMON_FLOP, 1.0f, 0.5f);
         player.sendTitle(
-            TextUtil.color("&c[ ɪᴋᴀɴ ʟᴇᴘᴀs ]"), 
+            TextUtil.color("&c[ ғɪsʜ ᴇsᴄᴀᴘᴇᴅ ]"), 
             TextUtil.color("&7ᴋᴀᴍᴜ ᴍᴇᴍʙᴜᴋᴀ ɪɴᴠᴇɴᴛᴏʀʏ sᴀᴀᴛ ᴍᴇɴᴀʀɪᴋ sᴇɴᴀʀ!"), 
             10, 50, 10
         );

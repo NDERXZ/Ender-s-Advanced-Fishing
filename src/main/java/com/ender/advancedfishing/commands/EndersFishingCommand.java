@@ -100,17 +100,17 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             case "rod":
                 // Berikan pancingan
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("§cCommand ini hanya dapat digunakan oleh player!");
+                    sender.sendMessage("§cThis command can only be executed by a player!");
                     return true;
                 }
                 
                 if (!sender.hasPermission("eaf.rod")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
                 
                 if (args.length < 2) {
-                    sender.sendMessage("§cPenggunaan: /eaf rod <id> [jumlah]");
+                    sender.sendMessage("§cUsage: /eaf rod <id> [amount]");
                     return true;
                 }
                 
@@ -123,7 +123,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                         if (rodAmount < 1) rodAmount = 1;
                         if (rodAmount > 64) rodAmount = 64;
                     } catch (NumberFormatException e) {
-                        sender.sendMessage("§cJumlah harus berupa angka!");
+                        sender.sendMessage("§cAmount must be a valid number!");
                         return true;
                     }
                 }
@@ -136,7 +136,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                     return true;
                 }
                 if (args.length < 2) {
-                    sender.sendMessage(TextUtil.color("&cPenggunaan: /eaf fish <id> [pemain] [jumlah]"));
+                    sender.sendMessage(TextUtil.color("&cUsage: /eaf fish <id> [player] [amount]"));
                     return true;
                 }
                 String fishId = args[1].toLowerCase();
@@ -154,34 +154,34 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                     }
                 }
                 if (recipientPlayer == null) {
-                    sender.sendMessage(TextUtil.color("&cTentukan pemain penerima ikan!"));
+                    sender.sendMessage(TextUtil.color("&cSpecify target player!"));
                     return true;
                 }
                 com.ender.advancedfishing.fishing.model.CustomFish fishModel = plugin.getConfigManager().getCustomFishes().get(fishId);
                 if (fishModel == null) {
-                    sender.sendMessage(TextUtil.color("&cIkan dengan ID '&e" + fishId + "&c' tidak ditemukan!"));
+                    sender.sendMessage(TextUtil.color("&cIkan dengan ID '&e" + fishId + "&c' not found!"));
                     return true;
                 }
                 for (int i = 0; i < Math.max(1, fishAmount); i++) {
                     recipientPlayer.getInventory().addItem(fishModel.createCaughtInstance(0, 0, 0).createItemStack());
                 }
-                sender.sendMessage(TextUtil.oceanic("[ ɪᴋᴀɴ ᴋᴜsᴛᴏᴍ ]") + TextUtil.color(" &aMemberikan &f" + fishAmount + "x &e" + fishModel.getName() + " &ake &f" + recipientPlayer.getName()));
+                sender.sendMessage(TextUtil.oceanic("[ ᴄᴜsᴛᴏᴍ ғɪsʜ ]") + TextUtil.color(" &aGranted &f" + fishAmount + "x &e" + fishModel.getName() + " &ato &f" + recipientPlayer.getName()));
                 return true;
 
             case "bait":
                 // Berikan umpan
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("§cCommand ini hanya dapat digunakan oleh player!");
+                    sender.sendMessage("§cThis command can only be executed by a player!");
                     return true;
                 }
                 
                 if (!sender.hasPermission("eaf.bait")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
                 
                 if (args.length < 2) {
-                    sender.sendMessage("§cPenggunaan: /eaf bait <id> [jumlah]");
+                    sender.sendMessage("§cUsage: /eaf bait <id> [amount]");
                     return true;
                 }
                 
@@ -194,7 +194,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                         if (baitAmount < 1) baitAmount = 1;
                         if (baitAmount > 64) baitAmount = 64;
                     } catch (NumberFormatException e) {
-                        sender.sendMessage("§cJumlah harus berupa angka!");
+                        sender.sendMessage("§cAmount must be a valid number!");
                         return true;
                     }
                 }
@@ -221,7 +221,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             case "location":
                 // Handle location management commands
                 if (!sender.hasPermission("eaf.admin")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
                 
@@ -259,7 +259,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                     case "tp":
                         // Teleport to a special location
                         if (!(sender instanceof Player)) {
-                            sender.sendMessage("§cCommand ini hanya dapat digunakan oleh player!");
+                            sender.sendMessage("§cThis command can only be executed by a player!");
                             return true;
                         }
                         
@@ -273,7 +273,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                     case "create":
                         // Create a new special location
                         if (!(sender instanceof Player)) {
-                            sender.sendMessage("§cCommand ini hanya dapat digunakan oleh player!");
+                            sender.sendMessage("§cThis command can only be executed by a player!");
                             return true;
                         }
                         
@@ -327,13 +327,13 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             case "repair":
                 // Repair fishing rod
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("§cCommand ini hanya dapat digunakan oleh player!");
+                    sender.sendMessage("§cThis command can only be executed by a player!");
                     return true;
                 }
                 
                 // Check permission
                 if (!sender.hasPermission("eaf.repair")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
                 
@@ -342,12 +342,12 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             case "sell":
                 // Sell fish from inventory
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("§cCommand ini hanya dapat digunakan oleh player!");
+                    sender.sendMessage("§cThis command can only be executed by a player!");
                     return true;
                 }
                 
                 if (!sender.hasPermission("eaf.sell")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
                 
@@ -364,12 +364,12 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             case "shop":
                 // Open shop GUI
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("§cCommand ini hanya dapat digunakan oleh player!");
+                    sender.sendMessage("§cThis command can only be executed by a player!");
                     return true;
                 }
                 
                 if (!sender.hasPermission("eaf.shop")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
                 
@@ -455,12 +455,12 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                 
             case "afk":
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("§cCommand ini hanya dapat digunakan oleh player!");
+                    sender.sendMessage("§cThis command can only be executed by a player!");
                     return true;
                 }
                 
                 if (!sender.hasPermission("eaf.afk")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
 
@@ -471,7 +471,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             case "journal":
             case "codex":
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("§cPerintah ini hanya dapat digunakan oleh pemain!");
+                    sender.sendMessage("§cThis command can only be executed by a player!");
                     return true;
                 }
                 new JournalGUI((Player) sender, plugin).open();
@@ -479,7 +479,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
 
             case "chum":
                 if (!sender.hasPermission("eaf.admin") && !sender.hasPermission("eaf.chum")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
                 Player targetPlayer = null;
@@ -495,7 +495,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                     } catch (NumberFormatException ignored) {}
                 }
                 if (targetPlayer == null) {
-                    sender.sendMessage("§cPemain tidak ditemukan!");
+                    sender.sendMessage("§cPlayer not found!");
                     return true;
                 }
                 targetPlayer.getInventory().addItem(ChumBucketManager.createChumBucket(amount));
@@ -506,13 +506,13 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             case "kolektor":
                 // Check permissions
                 if (!sender.hasPermission("eaf.collector")) {
-                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cYou do not have permission to use this command!");
                     return true;
                 }
                 
                 // Make sure it's a player
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("§cPerintah ini hanya dapat digunakan oleh pemain!");
+                    sender.sendMessage("§cThis command can only be executed by a player!");
                     return true;
                 }
                 
@@ -582,7 +582,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                 .getConfigurationSection("special_locations." + locationId);
         
         if (locSection == null) {
-            player.sendMessage("§cLokasi dengan ID '" + locationId + "' tidak ditemukan!");
+            player.sendMessage("§cLokasi dengan ID '" + locationId + "' not found!");
             return false;
         }
         
@@ -662,7 +662,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
     private boolean deleteLocation(CommandSender sender, String locationId) {
         // Check if location exists
         if (!plugin.getConfigManager().getFishingConfig().contains("special_locations." + locationId)) {
-            sender.sendMessage("§cLokasi dengan ID '" + locationId + "' tidak ditemukan!");
+            sender.sendMessage("§cLokasi dengan ID '" + locationId + "' not found!");
             return false;
         }
         
@@ -691,7 +691,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
     private boolean giveRod(Player player, String rodId, int amount) {
         FishingRod rod = plugin.getConfigManager().getFishingRods().get(rodId);
         if (rod == null) {
-            player.sendMessage("§cPancingan dengan ID '" + rodId + "' tidak ditemukan!");
+            player.sendMessage("§cPancingan dengan ID '" + rodId + "' not found!");
             return false;
         }
         
@@ -723,7 +723,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
     private boolean giveBait(Player player, String baitId, int amount) {
         FishingBait bait = plugin.getConfigManager().getFishingBaits().get(baitId);
         if (bait == null) {
-            player.sendMessage("§cUmpan dengan ID '" + baitId + "' tidak ditemukan!");
+            player.sendMessage("§cUmpan dengan ID '" + baitId + "' not found!");
             return false;
         }
         
@@ -816,7 +816,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
         int durabilityLost = maxDurability - currentDurability;
         
         if (durabilityLost <= 0) {
-            player.sendMessage("§cPancingan ini tidak perlu diperbaiki!");
+            player.sendMessage("§cThis fishing rod does not need repairs!");
             return false;
         }
         
@@ -827,7 +827,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
         // Check if economy is enabled and player has enough money
         if (economy.isEconomyEnabled()) {
             if (!economy.hasMoney(player, repairCost)) {
-                player.sendMessage("§cKamu tidak memiliki cukup uang untuk memperbaiki pancingan ini!");
+                player.sendMessage("§cYou do not have enough money to repair this rod!");
                 player.sendMessage("§cBiaya perbaikan: §f" + economy.formatMoney(repairCost) + 
                         " §7(Tier " + rod.getTier().getDisplayName() + ")");
                 return false;
@@ -842,7 +842,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
         // Try to repair the rod
         if (FishingListener.repairRod(player, heldItem)) {
             player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 1.0f, 1.0f);
-            player.sendMessage("§a§lBerhasil! §fPancingan telah diperbaiki.");
+            player.sendMessage("§a§lSuccess! §fYour fishing rod has been fully repaired.");
             return true;
         } else {
             // Refund money if repair failed
@@ -904,13 +904,13 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             ItemStack handItem = player.getInventory().getItemInMainHand();
             
             if (handItem.getType() == Material.AIR) {
-                player.sendMessage("§cKamu tidak memegang ikan!");
+                player.sendMessage("§cYou are not holding a fish!");
                 return false;
             }
             
             CustomFish fish = getFishFromItem(handItem);
             if (fish == null) {
-                player.sendMessage("§cItem yang kamu pegang bukan ikan hasil pancingan!");
+                player.sendMessage("§cThe held item is not a custom caught fish!");
                 return false;
             }
             

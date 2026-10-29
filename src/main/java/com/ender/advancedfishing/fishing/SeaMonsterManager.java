@@ -63,7 +63,7 @@ public class SeaMonsterManager implements Listener {
             boss = drowned;
         }
 
-        String bossName = TextUtil.color("&c&l[ ᴋʀᴀᴋᴇɴ sᴘᴀᴡɴ ]");
+        String bossName = TextUtil.color("&c&l[ ᴏᴄᴇᴀɴ ʟᴇᴠɪᴀᴛʜᴀɴ ]");
         boss.setCustomName(bossName);
         boss.setCustomNameVisible(true);
         boss.setGlowing(true);
@@ -86,11 +86,11 @@ public class SeaMonsterManager implements Listener {
 
         // Send alert to player
         player.sendTitle(
-            TextUtil.gradient("ʟᴀᴜᴛᴀɴ ʙᴇʀɢᴏɴᴄᴀɴɢ!", "#EB3349", "#F45C43"),
-            TextUtil.color("&cᴍᴏɴsᴛᴇʀ ʟᴀᴜᴛ ᴍᴜɴᴄᴜʟ ᴅᴀʀɪ ᴋᴇᴅᴀʟᴀᴍᴀɴ!"),
+            TextUtil.gradient("ᴏᴄᴇᴀɴ ᴛʀᴇᴍᴏʀ!", "#EB3349", "#F45C43"),
+            TextUtil.color("&cᴀ sᴇᴀ ᴍᴏɴsᴛᴇʀ ᴇᴍᴇʀɢᴇs ғʀᴏᴍ ᴛʜᴇ ᴅᴇᴘᴛʜs!"),
             10, 60, 15
         );
-        player.sendMessage(TextUtil.gradient("[ ᴍᴏɴsᴛᴇʀ ʟᴀᴜᴛ ]", "#EB3349", "#F45C43") + TextUtil.color(" &7Seekor monster laut purba terbangun dari kedalaman air! Kalahkan untuk memperoleh harta karun samudra."));
+        player.sendMessage(TextUtil.gradient("[ sᴇᴀ ᴍᴏɴsᴛᴇʀ ]", "#EB3349", "#F45C43") + TextUtil.color(" &7An ancient ocean titan has awakened from the deep! Slay it to claim oceanic treasures."));
 
         return true;
     }
@@ -113,12 +113,12 @@ public class SeaMonsterManager implements Listener {
 
         if (killer != null) {
             killer.playSound(killer.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1.0f, 1.0f);
-            killer.sendMessage(TextUtil.oceanic("[ ᴍᴏɴsᴛᴇʀ ʟᴀᴜᴛ ]") + TextUtil.color(" &aMonster laut berhasil ditaklukkan! Harta karun samudra telah dijatuhkan."));
+            killer.sendMessage(TextUtil.oceanic("[ sᴇᴀ ᴍᴏɴsᴛᴇʀ ]") + TextUtil.color(" &aThe sea monster has been vanquished! Oceanic treasures have been dropped."));
 
             // Award economy reward if Vault is enabled
             if (plugin.getEconomyManager() != null && plugin.getEconomyManager().isEconomyEnabled()) {
                 plugin.getEconomyManager().depositMoney(killer, 15000.0);
-                killer.sendMessage(TextUtil.oceanic("[ ᴍᴏɴsᴛᴇʀ ʟᴀᴜᴛ ]") + TextUtil.color(" &aHadiah uang sebesar &e$15,000 &atelah ditambahkan ke akunmu!"));
+                killer.sendMessage(TextUtil.oceanic("[ sᴇᴀ ᴍᴏɴsᴛᴇʀ ]") + TextUtil.color(" &aA bounty reward of &e$15,000 &ahas been deposited to your balance!"));
             }
 
             // Award skill XP

@@ -86,7 +86,7 @@ public class AfkFishingManager implements Listener {
 
     public boolean enableAfk(Player player) {
         if (!isAfkEnabledInConfig()) {
-            player.sendMessage("§c§l[AFK Fishing] §fFitur auto-fishing saat ini dinonaktifkan oleh server.");
+            player.sendMessage("§c§l[AFK Fishing] §fAuto-fishing is currently disabled on this server.");
             return false;
         }
 
@@ -96,17 +96,17 @@ public class AfkFishingManager implements Listener {
 
         // Cancel any active manual minigame cleanly
         if (plugin.getFishingListener() != null && plugin.getFishingListener().isPlayerInMinigame(player)) {
-            player.sendMessage("§e[AFK Fishing] Menghentikan minigame manual...");
+            player.sendMessage("§e[AFK Fishing] Aborting active manual minigame...");
             plugin.getFishingListener().getStrikeMinigame().endMinigameAbort(player);
         }
 
         int luckNerfPct = (int) Math.round(getLuckNerf() * 100.0);
         int speedNerfPct = (int) Math.round(getSpeedNerf() * 100.0);
 
-        player.sendMessage("§a§l[AFK Fishing] §fMode auto-fishing berhasil §a§lDIAKTIFKAN§f!");
-        player.sendMessage("§e§l[NERF AKTIF] §7Keberuntungan: §c-" + luckNerfPct + "% §7| Kecepatan: §c-" + speedNerfPct + "%");
-        player.sendMessage("§7Kail akan menarik ikan secara otomatis setiap ada gigitan. Ketik §f/eaf afk §7lagi untuk menonaktifkan.");
-        CompatibilityHelper.sendActionBar(player, "§a[AFK Fishing Aktif] Menunggu gigitan ikan...");
+        player.sendMessage("§a§l[AFK Fishing] §fAuto-fishing mode has been §a§lACTIVATED§f!");
+        player.sendMessage("§e§l[NERF AKTIF] §7Luck Nerf: §c-" + luckNerfPct + "% §7| Speed Nerf: §c-" + speedNerfPct + "%");
+        player.sendMessage("§7Fish will be reeled automatically upon bites. Type §f/eaf afk §7again to deactivate.");
+        CompatibilityHelper.sendActionBar(player, "§a[AFK Fishing Aktif] Waiting for fish bite...");
         return true;
     }
 
@@ -206,11 +206,11 @@ public class AfkFishingManager implements Listener {
             for (ItemStack drop : leftover.values()) {
                 player.getWorld().dropItemNaturally(player.getLocation(), drop);
             }
-            player.sendMessage("§e§lPerhatian! §fInventory penuh, hasil pancingan dijatuhkan ke tanah.");
+            player.sendMessage("§e§lWarning! §fInventory full, catch dropped naturally on the ground.");
         }
 
         player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
-        player.sendTitle("§a§l[AFK Catch]", "§fMendapatkan §b" + fish.getName() + " §7(" + fish.getFormattedWeight() + ")", 5, 40, 10);
+        player.sendTitle("§a§l[AFK Catch]", "§fCaught §b" + fish.getName() + " §7(" + fish.getFormattedWeight() + ")", 5, 40, 10);
 
         // Record statistics
         plugin.getStatisticsManager().recordFishCaught(uuid, fish);
@@ -339,7 +339,7 @@ public class AfkFishingManager implements Listener {
                         CompatibilityHelper.sendActionBar(player, "§a[AFK Fishing] Kail dilemparkan kembali..." + baitInfo);
                     }
                 } catch (Throwable t) {
-                    player.sendMessage("§7[AFK Fishing] Lemparkan kail pancing untuk melanjutkan auto-fishing.");
+                    player.sendMessage("§7[AFK Fishing] Cast your line to resume auto-fishing.");
                 }
             }
         }.runTaskLater(plugin, recastDelayTicks);

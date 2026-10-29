@@ -23,7 +23,7 @@ public class AuraSkillsHook {
             if (Bukkit.getPluginManager().isPluginEnabled("AuraSkills")) {
                 Class.forName("dev.aurelium.auraskills.api.AuraSkillsApi");
                 available = true;
-                plugin.getLogger().info("AuraSkills terdeteksi dan berhasil dihubungkan!");
+                plugin.getLogger().info("AuraSkills detected and hooked successfully!");
             } else {
                 available = false;
             }

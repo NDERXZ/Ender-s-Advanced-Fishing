@@ -90,15 +90,15 @@ public class ChumBucketManager implements Listener {
 
     public static ItemStack createChumBucket(int amount) {
         ItemStack item = new ItemBuilder(Material.WATER_BUCKET)
-                .name(TextUtil.oceanic("ᴇᴍʙᴇʀ ᴜᴍᴘᴀɴ ᴛᴀʙᴜʀ"))
+                .name(TextUtil.oceanic("ᴄʜᴜᴍ ʙᴜᴄᴋᴇᴛ"))
                 .lore(
                     TextUtil.color("&8────────────────────"),
-                    TextUtil.color("&7ᴛɪᴘᴇ: &bᴠᴏʀᴛᴇx ᴜᴍᴘᴀɴ"),
-                    TextUtil.color("&7ᴅᴜʀᴀsɪ: &f3 ᴍᴇɴɪᴛ"),
-                    TextUtil.color("&7ʀᴀᴅɪᴜs: &f6 ʙʟᴏᴋ"),
+                    TextUtil.color("&7ᴛʏᴘᴇ: &bʙᴀɪᴛ ᴠᴏʀᴛᴇx"),
+                    TextUtil.color("&7ᴅᴜʀᴀᴛɪᴏɴ: &f3 ᴍɪɴᴜᴛᴇs"),
+                    TextUtil.color("&7ʀᴀᴅɪᴜs: &f6 ʙʟᴏᴄᴋs"),
                     TextUtil.color("&7ᴇꜰᴇᴋ: &a+25% ʟᴜᴄᴋ &7& &e-50% ᴡᴀɪᴛ ᴛɪᴍᴇ"),
                     TextUtil.color("&8────────────────────"),
-                    TextUtil.color("&eᴋʟɪᴋ ᴋᴀɴᴀɴ ᴋᴇ ᴀɪʀ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴀᴋᴛɪғᴋᴀɴ")
+                    TextUtil.color("&eʀɪɢʜᴛ-ᴄʟɪᴄᴋ ᴏɴ ᴡᴀᴛᴇʀ ᴛᴏ ᴅᴇᴘʟᴏʏ")
                 )
                 .amount(Math.max(1, amount))
                 .build();
@@ -149,7 +149,7 @@ public class ChumBucketManager implements Listener {
         }
 
         if (targetLoc == null) {
-            player.sendMessage(TextUtil.oceanic("[ ᴠᴏʀᴛᴇx ᴜᴍᴘᴀɴ ]") + TextUtil.color(" &cKamu harus mengklik blok air untuk menaburkan umpan!"));
+            player.sendMessage(TextUtil.oceanic("[ ʙᴀɪᴛ ᴠᴏʀᴛᴇx ]") + TextUtil.color(" &cYou must target a water block to deploy chum!"));
             return;
         }
 
@@ -174,12 +174,12 @@ public class ChumBucketManager implements Listener {
         player.playSound(targetLoc, Sound.ENTITY_DOLPHIN_SPLASH, 1.0f, 1.0f);
 
         player.sendTitle(
-            TextUtil.oceanic("ᴠᴏʀᴛᴇx ᴜᴍᴘᴀɴ ᴀᴋᴛɪғ!"),
-            TextUtil.color("&7ᴅᴜʀᴀsɪ: &b3 ᴍᴇɴɪᴛ &8| &7ʀᴀᴅɪᴜs: &f6 ʙʟᴏᴋ"),
+            TextUtil.oceanic("ʙᴀɪᴛ ᴠᴏʀᴛᴇx ᴀᴄᴛɪᴠᴀᴛᴇᴅ!"),
+            TextUtil.color("&7ᴅᴜʀᴀᴛɪᴏɴ: &b3 ᴍɪɴᴜᴛᴇs &8| &7ʀᴀᴅɪᴜs: &f6 ʙʟᴏᴄᴋs"),
             10, 40, 10
         );
 
-        player.sendMessage(TextUtil.oceanic("[ ᴠᴏʀᴛᴇx ᴜᴍᴘᴀɴ ]") + TextUtil.color(" &aVortex umpan berhasil aktif di area ini! Memancing di sekitar lingkaran akan mendapat bonus kelangkaan dan tarikan lebih cepat."));
+        player.sendMessage(TextUtil.oceanic("[ ʙᴀɪᴛ ᴠᴏʀᴛᴇx ]") + TextUtil.color(" &aBait vortex deployed! Anglers within the circle receive +25% luck and -50% wait times."));
     }
 
     public boolean isNearVortex(Location location) {

@@ -8,28 +8,28 @@ softdepend: [Vault, PlaceholderAPI, Nexo, Oraxen, ItemsAdder, AuraSkills]
 
 commands:
   eaf:
-    description: Perintah utama plugin Ender's Advanced Fishing
+    description: Main command for Ender's Advanced Fishing plugin
     aliases: [endersfishing, fishing, nusafishing, nf]
     usage: /eaf help
 
 permissions:
   eaf.rod:
-    description: Izin untuk mendapatkan pancingan custom
+    description: Permission to give custom fishing rods
     default: op
   eaf.bait:
-    description: Izin untuk mendapatkan umpan custom
+    description: Permission to give custom fishing baits
     default: op
   eaf.afk:
-    description: Izin untuk menggunakan mode auto-fishing (/eaf afk)
+    description: Permission to use automated AFK fishing
     default: true
   eaf.journal:
-    description: Izin untuk membuka jurnal dan ensiklopedia ikan
+    description: Permission to open Fish Journal and Codex
     default: true
   eaf.chum:
-    description: Izin untuk mendapatkan ember umpan tabur
+    description: Permission to give Chum Buckets
     default: op
   eaf.admin:
-    description: Izin admin untuk semua perintah
+    description: Administrator permission for all features
     default: op
     children:
       eaf.admin.reload: true
@@ -45,7 +45,7 @@ permissions:
       eaf.journal: true
       eaf.chum: true
   eaf.admin.reload:
-    description: Izin untuk memuat ulang konfigurasi
+    description: Permission to reload plugin configuration
     default: op
   eaf.admin.event:
     description: Izin untuk mengelola event memancing
