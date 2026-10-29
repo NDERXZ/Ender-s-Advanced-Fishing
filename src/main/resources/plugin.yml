@@ -1,0 +1,67 @@
+name: EndersAdvancedFishing
+main: com.ender.advancedfishing.EndersAdvancedFishing
+version: ${version}
+website: https://github.com/Ender/EndersAdvancedFishing
+author: "Ender"
+api-version: '1.21'
+softdepend: [Vault, PlaceholderAPI, Nexo, Oraxen, ItemsAdder, AuraSkills]
+
+commands:
+  eaf:
+    description: Perintah utama plugin Ender's Advanced Fishing
+    aliases: [endersfishing, fishing, nusafishing, nf]
+    usage: /eaf help
+
+permissions:
+  eaf.rod:
+    description: Izin untuk mendapatkan pancingan custom
+    default: op
+  eaf.bait:
+    description: Izin untuk mendapatkan umpan custom
+    default: op
+  eaf.afk:
+    description: Izin untuk menggunakan mode auto-fishing (/eaf afk)
+    default: true
+  eaf.journal:
+    description: Izin untuk membuka jurnal dan ensiklopedia ikan
+    default: true
+  eaf.chum:
+    description: Izin untuk mendapatkan ember umpan tabur
+    default: op
+  eaf.admin:
+    description: Izin admin untuk semua perintah
+    default: op
+    children:
+      eaf.admin.reload: true
+      eaf.admin.event: true
+      eaf.admin.tournament: true
+      eaf.rod: true
+      eaf.bait: true
+      eaf.repair: true
+      eaf.sell: true
+      eaf.shop: true
+      eaf.afk: true
+      eaf.collector: true
+      eaf.journal: true
+      eaf.chum: true
+  eaf.admin.reload:
+    description: Izin untuk memuat ulang konfigurasi
+    default: op
+  eaf.admin.event:
+    description: Izin untuk mengelola event memancing
+    default: op
+  eaf.repair:
+    description: Izin untuk memperbaiki pancingan custom
+    default: true
+  eaf.sell:
+    description: Izin untuk menjual ikan
+    default: true
+  eaf.shop:
+    description: Izin untuk menggunakan toko
+    default: true
+  eaf.collector:
+    description: Izin untuk menggunakan kolektor ikan mistik
+    default: true
+  eaf.admin.tournament:
+    description: Izin untuk mengelola turnamen memancing
+    default: op
