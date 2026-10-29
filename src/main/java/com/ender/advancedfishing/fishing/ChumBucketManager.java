@@ -133,6 +133,11 @@ public class ChumBucketManager implements Listener {
         if (!isChumBucket(item)) return;
 
         Player player = event.getPlayer();
+        if (plugin.getConfigManager() != null && !plugin.getConfigManager().isFishingAllowedIn(player.getWorld())) {
+            player.sendMessage(TextUtil.oceanic("[ ʙᴀɪᴛ ᴠᴏʀᴛᴇx ]") + TextUtil.color(" &cChum buckets can only be deployed in active fishing worlds!"));
+            event.setCancelled(true);
+            return;
+        }
         Block clickedBlock = event.getClickedBlock();
         Location targetLoc = null;
 

@@ -394,7 +394,17 @@ public class ConfigManager {
     public boolean isFishingAllowedIn(org.bukkit.World world) {
         if (world == null) return false;
         if (allowedWorlds != null && !allowedWorlds.isEmpty()) {
-            return allowedWorlds.contains(world.getName());
+            String worldName = world.getName();
+            for (String allowed : allowedWorlds) {
+                if (allowed == null) continue;
+                String trimmed = allowed.trim();
+                if (trimmed.equalsIgnoreCase(worldName) ||
+                    worldName.equalsIgnoreCase("minecraft:" + trimmed) ||
+                    trimmed.equalsIgnoreCase("minecraft:" + worldName)) {
+                    return true;
+                }
+            }
+            return false;
         }
         String envName = world.getEnvironment().name();
         for (String allowed : allowedDimensionTypes) {

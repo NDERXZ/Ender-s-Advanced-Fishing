@@ -47,17 +47,18 @@ tier_colors:
     MYTHIC: "&c"
     SECRET: "&4"
 
-# Pengaturan dimensi memancing
-# Hanya di dimensi / world yang terdaftar, sistem pancingan custom & minigame akan aktif.
-# Di luar dimensi ini, memancing 100% menggunakan mekanik dan tangkapan vanilla biasa.
+# Dimension & World Settings
+# Only in configured dimensions / worlds, custom fishing and minigames will be active.
+# Outside these dimensions / worlds, fishing is 100% standard vanilla mechanics and catches.
 dimensions:
   allowed_types:
-    - NORMAL # Dimensi Overworld
+    - NORMAL
     # - NETHER
     # - THE_END
-  # Daftar nama world spesifik (kosong = semua world dengan tipe di atas).
-  # Contoh untuk server dengan Multiverse-Core: [overworld, survival] (jika ingin mengecualikan world spawn / minigame).
-  allowed_worlds: []
+  # Specific allowed world names (empty = all worlds matching allowed_types).
+  # If specified, ONLY these worlds will activate custom fishing.
+  allowed_worlds:
+    - gh
 
 # Economy settings
 economy:
