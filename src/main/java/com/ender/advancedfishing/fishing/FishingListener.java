@@ -200,7 +200,9 @@ public class FishingListener implements Listener {
                 plugin.getSkillManager().addFishingExp(player, xpGain);
 
                 // Add AuraSkills XP if enabled
-                plugin.getAuraSkillsHook().addFishingXp(player, fish);
+                if (plugin.getAuraSkillsHook() != null) {
+                    plugin.getAuraSkillsHook().addFishingXp(player, fish);
+                }
 
                 // Consume stamina based on fish weight
                 staminaManager.consumeStaminaForFish(player, fish, customRod);

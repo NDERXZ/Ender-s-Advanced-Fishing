@@ -230,7 +230,9 @@ public class AfkFishingManager implements Listener {
         plugin.getSkillManager().addFishingExp(player, xpGain);
 
         // Add AuraSkills XP
-        plugin.getAuraSkillsHook().addFishingXp(player, fish);
+        if (plugin.getAuraSkillsHook() != null) {
+            plugin.getAuraSkillsHook().addFishingXp(player, fish);
+        }
 
         // Consume stamina
         plugin.getStaminaManager().consumeStaminaForFish(player, fish, customRod);

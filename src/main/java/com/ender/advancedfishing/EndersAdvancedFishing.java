@@ -110,7 +110,12 @@ public class EndersAdvancedFishing extends JavaPlugin {
         this.rewardsManager = new RewardsManager(this);
         
         // Initialize AuraSkills integration
-        this.auraSkillsHook = new AuraSkillsHook(this);
+        try {
+            this.auraSkillsHook = new AuraSkillsHook(this);
+        } catch (Throwable t) {
+            getLogger().warning("Could not initialize AuraSkills hook: " + t.getMessage());
+            this.auraSkillsHook = null;
+        }
 
         // Initialize AFK fishing manager and register its listener
         this.afkFishingManager = new AfkFishingManager(this);
