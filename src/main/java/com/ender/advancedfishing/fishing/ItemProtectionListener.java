@@ -62,6 +62,25 @@ public class ItemProtectionListener implements Listener {
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
+    public void onCampfireInteract(org.bukkit.event.player.PlayerInteractEvent event) {
+        if (event.getAction() != org.bukkit.event.block.Action.RIGHT_CLICK_BLOCK) return;
+        if (event.getClickedBlock() == null) return;
+        Material mat = event.getClickedBlock().getType();
+        if (mat == Material.CAMPFIRE || mat == Material.SOUL_CAMPFIRE) {
+            ItemStack item = event.getItem();
+            if (isCustomFish(item)) {
+                event.setCancelled(true);
+                Player player = event.getPlayer();
+                player.spigot().sendMessage(net.md_5.bungee.api.ChatMessageType.ACTION_BAR, 
+                    net.md_5.bungee.api.chat.TextComponent.fromLegacyText(
+                        TextUtil.color("&c« ɪᴛᴇᴍ ᴛᴇʀʟɪɴᴅᴜɴɢɪ: ɪᴋᴀɴ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴅɪᴍᴀsᴀᴋ ᴅɪ ᴀᴘɪ ᴜɴɢɢᴜɴ! »")
+                    )
+                );
+            }
+        }
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onBlockPlace(BlockPlaceEvent event) {
         ItemStack item = event.getItemInHand();
         if (isCustomFish(item)) {

@@ -135,7 +135,12 @@ public class JournalManager {
 
     public synchronized void saveAllData() {
         YamlConfiguration configToSave = new YamlConfiguration();
-        for (Map.Entry<UUID, Map<String, FishJournalEntry>> playerEntry : journalCache.entrySet()) {
+        // Snapshot cache to prevent ConcurrentModificationException during async autosave
+        Map<UUID, Map<String, FishJournalEntry>> snapshot = new HashMap<>();
+        for (Map.Entry<UUID, Map<String, FishJournalEntry>> entry : journalCache.entrySet()) {
+            snapshot.put(entry.getKey(), new HashMap<>(entry.getValue()));
+        }
+        for (Map.Entry<UUID, Map<String, FishJournalEntry>> playerEntry : snapshot.entrySet()) {
             String uuidStr = playerEntry.getKey().toString();
             for (Map.Entry<String, FishJournalEntry> fishEntry : playerEntry.getValue().entrySet()) {
                 String path = uuidStr + "." + fishEntry.getKey();

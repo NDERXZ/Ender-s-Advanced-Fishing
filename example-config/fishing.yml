@@ -1,768 +1,3043 @@
 # Ender's Advanced Fishing Configuration
 config_version: "1.4"
-# Konfigurasi untuk alat pancing, umpan, dan ikan-ikan
+# Konfigurasi resmi alat pancing, umpan, dan ikan-ikan
 
 # Pengaturan alat pancing
 # ==============================================================================
 # PANDUAN PENGGUNAAN TEKSTUR / ITEM PROVIDER (Vanilla, Nexo, Oraxen, ItemsAdder):
-# Untuk menggunakan tekstur custom pada alat pancing manapun di bawah, tambahkan:
 #   texture_provider: vanilla | nexo | oraxen | itemsadder
 #   texture_id: "<id_item>"
-#   material: FISHING_ROD       # Fallback jika plugin tekstur tidak aktif
-#   custom_model_data: 1001     # Fallback integer CMD / resource pack vanilla
-#
-# CONTOH PENERAPAN PADA ALAT PANCING (cukup terapkan pada rod yang diinginkan):
-#   # Nexo:
-#   #   texture_provider: nexo
-#   #   texture_id: "carbon_rod"
-#   # Oraxen:
-#   #   texture_provider: oraxen
-#   #   texture_id: "mythic_rod"
-#   # ItemsAdder:
-#   #   texture_provider: itemsadder
-#   #   texture_id: "endersfishing:poseidon_rod"
+#   material: FISHING_ROD
+#   custom_model_data: 1001
 # ==============================================================================
 fishing_rods:
-  basic_rod:
-    name: "Pancingan Bambu"
-    description: "Pancingan sederhana dari bambu"
+  admin_dev_rod:
+    name: "Admin Dev Rod"
+    description: "Joran master pengembang server dengan daya pikat dan ketahanan mutlak."
     custom_model_data: 1001
-    durability: 50
-    stamina_modifier: 1.0
-    tier: BASIC
-    special_ability: false
-    price: 1500  # Dari 500 → 1,500 (3x lipat)
-    lure_level: 1
-    max_weight_capacity: 25.0
-    
-  intermediate_rod:
-    name: "Pancingan Fiber"
-    description: "Pancingan modern dengan stamina yang lebih baik"
-    custom_model_data: 1002
-    durability: 150
-    stamina_modifier: 0.7
-    tier: INTERMEDIATE
-    special_ability: false
-    price: 7500  # Dari 2,000 → 7,500 (3.75x lipat)
-    lure_level: 2
-    max_weight_capacity: 100.0
-    
-  advanced_rod:
-    name: "Pancingan Carbon"
-    description: "Pancingan profesional dengan performa terbaik"
-    custom_model_data: 1003
-    durability: 300
-    stamina_modifier: 0.5
-    tier: ADVANCED
+    durability: 10000
+    stamina_modifier: 0.15
+    tier: SECRET
+    allowed_tiers:
+      - SECRET
     special_ability: true
-    ability_description: "10% kesempatan mendapat ikan tier lebih tinggi"
-    price: 25000  # Dari 5,000 → 25,000 (5x lipat)
-    lure_level: 3
-    max_weight_capacity: 500.0
-    
-  expert_rod:
-    name: "Pancingan Master"
-    description: "Pancingan hasil tempaan terbaik"
+    ability_description: "+50% peluang elevasi tier & kapasitas tarikan tanpa batas"
+    price: 2000000
+    lure_level: 7
+    max_weight_capacity: 150000
+
+  celestal_angelic_rod:
+    name: "Angelic Rod"
+    description: "Joran berdaya surgawi bertabur bulu malaikat, memancarkan berkah tangkapan rahasia."
+    custom_model_data: 1002
+    durability: 10000
+    stamina_modifier: 0.15
+    tier: SECRET
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "+25% peluang memanggil ikan tier Secret dan Mythic"
+    price: 2000000
+    lure_level: 7
+    max_weight_capacity: 150000
+
+  celestal_gold_rod:
+    name: "Gold Rod"
+    description: "Joran bersepuh emas murni kerajaan langit, menarik tangkapan bernilai tinggi."
+    custom_model_data: 1003
+    durability: 10000
+    stamina_modifier: 0.15
+    tier: SECRET
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "+20% pengali harga jual ikan yang ditangkap"
+    price: 2000000
+    lure_level: 7
+    max_weight_capacity: 150000
+
+  celestal_hyper_rod:
+    name: "Hyper Rod"
+    description: "Joran bermuatan partikel kosmik hiperaktif untuk akselerasi sambaran ikan."
     custom_model_data: 1004
-    durability: 500
+    durability: 10000
+    stamina_modifier: 0.15
+    tier: SECRET
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "+30% kecepatan reaksi strike minigame"
+    price: 2000000
+    lure_level: 7
+    max_weight_capacity: 150000
+
+  common_carbon_rod:
+    name: "Carbon Rod"
+    description: "Joran serat karbon modern yang ringan dan seimbang untuk pemula."
+    custom_model_data: 1005
+    durability: 250
+    stamina_modifier: 0.85
+    tier: BASIC
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+    special_ability: false
+    price: 2500
+    lure_level: 1
+    max_weight_capacity: 100
+
+  common_luck_rod:
+    name: "Luck Rod"
+    description: "Joran kayu dengan jimat keberuntungan sederhana di ujung pegangan."
+    custom_model_data: 1006
+    durability: 250
+    stamina_modifier: 0.85
+    tier: BASIC
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+    special_ability: false
+    price: 2500
+    lure_level: 1
+    max_weight_capacity: 100
+
+  common_starter_rod:
+    name: "Starter Rod"
+    description: "Joran kayu standar pemula untuk memulai petualangan memancing."
+    custom_model_data: 1007
+    durability: 250
+    stamina_modifier: 0.85
+    tier: BASIC
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+    special_ability: false
+    price: 2500
+    lure_level: 1
+    max_weight_capacity: 100
+
+  common_toy_rod:
+    name: "Toy Rod"
+    description: "Joran plastik miniatur yang fleksibel untuk memancing di perairan tenang."
+    custom_model_data: 1008
+    durability: 250
+    stamina_modifier: 0.85
+    tier: BASIC
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+    special_ability: false
+    price: 2500
+    lure_level: 1
+    max_weight_capacity: 100
+
+  epic_chrome_rod:
+    name: "Chrome Rod"
+    description: "Joran paduan kromium tahan karat industri berat, kuat menahan ikan berbobot ratusan kilogram."
+    custom_model_data: 1009
+    durability: 2000
     stamina_modifier: 0.4
     tier: EXPERT
-    special_ability: true
-    ability_description: "20% kesempatan double catch"
-    price: 75000  # Dari 10,000 → 75,000 (7.5x lipat)
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+      - EPIC
+      - LEGENDARY
+    special_ability: false
+    price: 85000
     lure_level: 4
-    max_weight_capacity: 2500.0
-    
-  legendary_rod:
-    name: "Pancingan Legenda Laut"
-    description: "Konon hanya nelayan legendaris yang bisa menggunakannya"
-    custom_model_data: 1005
-    durability: 1000
+    max_weight_capacity: 5000
+
+  epic_steampunk_rod:
+    name: "Steampunk Rod"
+    description: "Joran bertenaga uap dengan roda gigi kuningan antik untuk menarik ikan bertenaga besar."
+    custom_model_data: 1010
+    durability: 2000
+    stamina_modifier: 0.4
+    tier: EXPERT
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+      - EPIC
+      - LEGENDARY
+    special_ability: false
+    price: 85000
+    lure_level: 4
+    max_weight_capacity: 5000
+
+  forgotten_withering_rod:
+    name: "Withering Rod"
+    description: "Joran terkutuk bertatahkan tulang Nether, memikat predator gelap samudra purba."
+    custom_model_data: 1011
+    durability: 10000
+    stamina_modifier: 0.15
+    tier: SECRET
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "+20% peluang ikan langka di malam hari"
+    price: 2000000
+    lure_level: 7
+    max_weight_capacity: 150000
+
+  legendary_astral_rod:
+    name: "Astral Rod"
+    description: "Joran yang ditempa dari serpihan meteorit kosmik berselimut debu bintang."
+    custom_model_data: 1012
+    durability: 3500
     stamina_modifier: 0.3
     tier: MASTER
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+      - EPIC
+      - LEGENDARY
+      - MYTHIC
     special_ability: true
-    ability_description: "5% kesempatan mendapat ikan legendaris"
-    price: 250000  # Dari 20,000 → 250,000 (12.5x lipat)
+    ability_description: "+25% peluang ikan kualitas di atas 90%"
+    price: 275000
     lure_level: 5
-    max_weight_capacity: 10000.0
+    max_weight_capacity: 20000
 
-  mythic_rod:
-    name: "Pancingan Trisula Samudera"
-    description: "Pancingan sakti yang dialiri kekuatan samudra purba"
-    custom_model_data: 1006
-    durability: 2500
+  legendary_fluorescent_rod:
+    name: "Fluorescent Rod"
+    description: "Joran berpendar fosfor neon terang, menembus kegelapan palung laut malam."
+    custom_model_data: 1013
+    durability: 3500
+    stamina_modifier: 0.3
+    tier: MASTER
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+      - EPIC
+      - LEGENDARY
+      - MYTHIC
+    special_ability: true
+    ability_description: "+20% peluang ikan langka di cuaca hujan atau badai"
+    price: 275000
+    lure_level: 5
+    max_weight_capacity: 20000
+
+  legendary_hazmat_rod:
+    name: "Hazmat Rod"
+    description: "Joran berselubung polimer pelindung racun, tahan di perairan paling ekstrem."
+    custom_model_data: 1014
+    durability: 3500
+    stamina_modifier: 0.3
+    tier: MASTER
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+      - EPIC
+      - LEGENDARY
+      - MYTHIC
+    special_ability: true
+    ability_description: "+20% kapasitas bobot maksimal ikan"
+    price: 275000
+    lure_level: 5
+    max_weight_capacity: 20000
+
+  mythic_angler_rod:
+    name: "Angler Rod"
+    description: "Joran lentera purba bercahaya bioluminesensi pemanggil penguasa palung laut."
+    custom_model_data: 1015
+    durability: 6000
     stamina_modifier: 0.2
     tier: MYTHIC
+    allowed_tiers:
+      - ALL
     special_ability: true
-    ability_description: "10% kesempatan mendapat ikan mistik"
+    ability_description: "+35% peluang mendapatkan ikan Mythic dan monster laut"
     price: 750000
     lure_level: 6
-    max_weight_capacity: 50000.0
+    max_weight_capacity: 60000
 
-# Pengaturan umpan
+  mythic_ares_rod:
+    name: "Ares Rod"
+    description: "Joran perang berhiaskan rubi merah membara, menaklukkan ikan monster buas."
+    custom_model_data: 1016
+    durability: 6000
+    stamina_modifier: 0.2
+    tier: MYTHIC
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "+30% bobot ikan tangkapan saat cuaca badai"
+    price: 750000
+    lure_level: 6
+    max_weight_capacity: 60000
+
+  mythic_bamboo_rod:
+    name: "Bamboo Rod"
+    description: "Joran bambu pusaka berumur ribuan tahun dengan kelenturan spiritual sempurna."
+    custom_model_data: 1017
+    durability: 6000
+    stamina_modifier: 0.2
+    tier: MYTHIC
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "-40% konsumsi stamina saat strike minigame"
+    price: 750000
+    lure_level: 6
+    max_weight_capacity: 60000
+
+  mythic_ghostfinn_rod:
+    name: "Ghostfinn Rod"
+    description: "Joran hantu tembus pandang berbahan sutra gaib yang menyamarkan getaran air."
+    custom_model_data: 1018
+    durability: 6000
+    stamina_modifier: 0.2
+    tier: MYTHIC
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "+25% peluang tangkapan berlipat ganda"
+    price: 750000
+    lure_level: 6
+    max_weight_capacity: 60000
+
+  rare_lucky_rod:
+    name: "Lucky Rod"
+    description: "Joran bermata giok keberuntungan alami, meningkatkan peluang tangkapan berharga."
+    custom_model_data: 1019
+    durability: 1000
+    stamina_modifier: 0.55
+    tier: ADVANCED
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+      - EPIC
+    special_ability: false
+    price: 28000
+    lure_level: 3
+    max_weight_capacity: 1200
+
+  rare_midnight_rod:
+    name: "Midnight Rod"
+    description: "Joran kayu eboni hitam legam penyerap cahaya untuk pemancing sunyi tengah malam."
+    custom_model_data: 1020
+    durability: 1000
+    stamina_modifier: 0.55
+    tier: ADVANCED
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+      - EPIC
+    special_ability: false
+    price: 28000
+    lure_level: 3
+    max_weight_capacity: 1200
+
+  secret_diamond_rod:
+    name: "Diamond Rod"
+    description: "Joran berlian murni berkilau abadi, mampu menahan tarikan legenda terdalam."
+    custom_model_data: 1021
+    durability: 10000
+    stamina_modifier: 0.15
+    tier: SECRET
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "+40% bonus nilai tangkapan dan daya tahan tak terbatas"
+    price: 2000000
+    lure_level: 7
+    max_weight_capacity: 150000
+
+  secret_element_rod:
+    name: "Element Rod"
+    description: "Joran pengendali empat elemen alam (air, api, tanah, udara) pembuka rahasia laut."
+    custom_model_data: 1022
+    durability: 10000
+    stamina_modifier: 0.15
+    tier: SECRET
+    allowed_tiers:
+      - ALL
+    special_ability: true
+    ability_description: "+50% peluang membuka seluruh tier tangkapan rahasia"
+    price: 2000000
+    lure_level: 7
+    max_weight_capacity: 150000
+
+  uncommon_damascus_rod:
+    name: "Damascus Rod"
+    description: "Joran baja berpamor lipatan damaskus, kokoh menghadapi hempasan arus sungai deras."
+    custom_model_data: 1023
+    durability: 500
+    stamina_modifier: 0.7
+    tier: INTERMEDIATE
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+    special_ability: false
+    price: 8500
+    lure_level: 2
+    max_weight_capacity: 350
+
+  uncommon_grass_rod:
+    name: "Grass Rod"
+    description: "Joran lentur berkamuflase lumut rawa, menyamarkan kail di perairan dangkal."
+    custom_model_data: 1024
+    durability: 500
+    stamina_modifier: 0.7
+    tier: INTERMEDIATE
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+    special_ability: false
+    price: 8500
+    lure_level: 2
+    max_weight_capacity: 350
+
+  uncommon_ice_rod:
+    name: "Ice Rod"
+    description: "Joran kristal es glasier pegunungan tinggi, menjaga kail tetap dingin dan segar."
+    custom_model_data: 1025
+    durability: 500
+    stamina_modifier: 0.7
+    tier: INTERMEDIATE
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+    special_ability: false
+    price: 8500
+    lure_level: 2
+    max_weight_capacity: 350
+
+  uncommon_lava_rod:
+    name: "Lava Rod"
+    description: "Joran berlapis obsidian tahan panas lahar untuk memancing di perairan suhu tinggi."
+    custom_model_data: 1026
+    durability: 500
+    stamina_modifier: 0.7
+    tier: INTERMEDIATE
+    allowed_tiers:
+      - COMMON
+      - UNCOMMON
+      - RARE
+    special_ability: false
+    price: 8500
+    lure_level: 2
+    max_weight_capacity: 350
+
+# Pengaturan umpan khusus
 fishing_baits:
   worm:
     name: "Cacing Tanah"
     description: "Umpan dasar untuk ikan kecil"
     material: WHEAT_SEEDS
     custom_model_data: 2001
-    valid_fish: [small_carp, small_catfish, small_tilapia]
-    attraction_modifier: 3.0     # Dari 1.5 menjadi 3.0 (200% peningkatan)
+    valid_fish: []
+    attraction_modifier: 2.5
     tier_boost: 0
-    uses_per_item: 5            # Dari 3 menjadi 5 penggunaan
-    price: 10
-    quality_boost: 1.25         # Dari 1.1 menjadi 1.25 (25% boost)
-    weight_boost: 1.20          # Dari 1.05 menjadi 1.20 (20% boost)
-    
+    uses_per_item: 5
+    price: 15
+    quality_boost: 1.15
+    weight_boost: 1.10
+
   cricket:
     name: "Jangkrik"
-    description: "Umpan untuk ikan sedang"
+    description: "Umpan serangga lincah"
     material: BEETROOT_SEEDS
     custom_model_data: 2002
-    valid_fish: [carp, catfish, tilapia, small_snakehead]
-    attraction_modifier: 4.0     # Dari 1.8 menjadi 4.0 
-    tier_boost: 1               # Dari 0 menjadi 1 (chance naik tier)
-    uses_per_item: 7            # Dari 5 menjadi 7 penggunaan
-    price: 20
-    quality_boost: 1.35         # Dari 1.15 menjadi 1.35 (35% boost)
-    weight_boost: 1.30          # Dari 1.1 menjadi 1.30 (30% boost)
-    
-  small_fish:
-    name: "Ikan Kecil"
-    description: "Umpan untuk ikan predator"
-    material: TROPICAL_FISH
+    valid_fish: []
+    attraction_modifier: 3.5
+    tier_boost: 1
+    uses_per_item: 5
+    price: 45
+    quality_boost: 1.25
+    weight_boost: 1.20
+
+  squid_tentacle:
+    name: "Tentakel Cumi"
+    description: "Umpan laut berbau tajam untuk predator"
+    material: INK_SAC
     custom_model_data: 2003
-    valid_fish: [snakehead, giant_catfish, barracuda]
-    attraction_modifier: 5.0     # Dari 2.2 menjadi 5.0
-    tier_boost: 2               # Dari 1 menjadi 2 (lebih tinggi chance naik tier)
-    uses_per_item: 4            # Dari 2 menjadi 4 penggunaan
-    price: 50
-    quality_boost: 1.50         # Dari 1.2 menjadi 1.50 (50% boost)
-    weight_boost: 1.45          # Dari 1.15 menjadi 1.45 (45% boost)
-    
-  rare_bait:
-    name: "Umpan Premium"
-    description: "Umpan berkualitas tinggi untuk semua ikan"
+    valid_fish: []
+    attraction_modifier: 5.0
+    tier_boost: 2
+    uses_per_item: 4
+    price: 120
+    quality_boost: 1.40
+    weight_boost: 1.35
+
+  aether_bait:
+    name: "Umpan Aether"
+    description: "Umpan mistis berkilau dari kedalaman primordial"
     material: HEART_OF_THE_SEA
     custom_model_data: 2004
-    valid_fish: []              # Bisa menangkap semua ikan
-    attraction_modifier: 8.0     # Dari 3.0 menjadi 8.0 (drastis)
-    tier_boost: 3               # Dari 2 menjadi 3 (hampir pasti naik tier)
-    uses_per_item: 3            # Dari 1 menjadi 3 penggunaan
-    price: 100
-    quality_boost: 2.0          # Dari 1.3 menjadi 2.0 (100% boost kualitas)
-    weight_boost: 2.0           # Dari 1.25 menjadi 2.0 (100% boost berat)
+    valid_fish: []
+    attraction_modifier: 8.0
+    tier_boost: 3
+    uses_per_item: 3
+    price: 350
+    quality_boost: 1.75
+    weight_boost: 1.60
 
-# Pengaturan ikan dengan tier
-# ==============================================================================
-# PANDUAN PENGGUNAAN TEKSTUR / ITEM PROVIDER (Vanilla, Nexo, Oraxen, ItemsAdder):
-# Untuk menggunakan tekstur custom pada ikan manapun di bawah, tambahkan:
-#   texture_provider: vanilla | nexo | oraxen | itemsadder
-#   texture_id: "<id_item>"
-#   material: COD / SALMON      # Fallback jika plugin tekstur tidak aktif
-#   custom_model_data: 3001     # Fallback integer CMD / resource pack vanilla
-#
-# CONTOH PENERAPAN PADA IKAN (cukup terapkan pada ikan yang diinginkan):
-#   # Nexo:
-#   #   texture_provider: nexo
-#   #   texture_id: "koi_fish"
-#   # Oraxen:
-#   #   texture_provider: oraxen
-#   #   texture_id: "mystic_bass"
-#   # ItemsAdder:
-#   #   texture_provider: itemsadder
-#   #   texture_id: "endersfishing:abyssal_trout"
-# ==============================================================================
+# Pengaturan ikan dengan tier (Diambil resmi dari koleksi NderrDEV-CustomFishing)
 fishes:
-  # Ikan tier COMMON
-  small_carp:
-    name: "Ikan Mas Kecil"
-    description: "Ikan mas berukuran kecil"
-    material: COD
+  # ==========================================
+  # TIER: COMMON
+  # ==========================================
+  azure_damsel:
+    name: "Azure Damsel"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
     custom_model_data: 3001
-    min_weight: 0.5
-    max_weight: 10.0  # Dinaikkan dari 0.5kg
+    min_weight: 0.2
+    max_weight: 5
     min_quality: 10
-    max_quality: 80
-    base_price: 5.0
+    max_quality: 75
+    base_price: 15
     tier: COMMON
-    
-  small_catfish:
-    name: "Lele Kecil"
-    description: "Lele berukuran kecil"
-    material: COD
+
+  clownfish:
+    name: "Clownfish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
     custom_model_data: 3002
-    min_weight: 0.5
-    max_weight: 15.0  # Dinaikkan dari 0.4kg
+    min_weight: 0.2
+    max_weight: 5
     min_quality: 10
-    max_quality: 80
-    base_price: 4.0
+    max_quality: 75
+    base_price: 15
     tier: COMMON
-    
-  # Ikan tier UNCOMMON
-  carp:
-    name: "Ikan Mas"
-    description: "Ikan mas berukuran sedang"
+
+  watanabei_angelfish:
+    name: "Watanabei Angelfish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3003
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  white_tang:
+    name: "White Tang"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3004
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  pygmy_goby:
+    name: "Pygmy Goby"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3005
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  herring_fish:
+    name: "Herring Fish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3006
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  strawberry_dotty:
+    name: "Strawberry Dotty"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3007
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  copperband_butterfly:
+    name: "Copperband Butterfly"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3008
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  old_boot:
+    name: "Old Boot"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: LEATHER_BOOTS
+    custom_model_data: 3009
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  yellowstate_angelfish:
+    name: "Yellowstate Angelfish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3010
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  vintage_blue_tang:
+    name: "Vintage Blue Tang"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3011
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  masked_angelfish:
+    name: "Masked Angelfish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3012
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  conspi_angelfish:
+    name: "Conspi Angelfish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3013
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  skunk_tilefish:
+    name: "Skunk Tilefish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3014
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  fade_tang:
+    name: "Fade Tang"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3015
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  reef_chromis:
+    name: "Reef Chromis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3016
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  jennifer_dottyback:
+    name: "Jennifer Dottyback"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3017
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  zoster_butterfly:
+    name: "Zoster Butterfly"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3018
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  boa_angelfish:
+    name: "Boa Angelfish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3019
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  volcanic_basslet:
+    name: "Volcanic Basslet"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3020
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  volcano_corazon_damsel:
+    name: "Volcano Corazon Damsel"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3021
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  specked_butterfly:
+    name: "Specked Butterfly"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3022
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  sail_tang:
+    name: "Sail Tang"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3023
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  orangy_goby:
+    name: "Orangy Goby"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3024
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  ash_basslet:
+    name: "Ash Basslet"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3025
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  electric_eel:
+    name: "Electric Eel"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: SALMON
-    custom_model_data: 3101
-    min_weight: 5.0
-    max_weight: 50.0  # Dinaikkan dari 2.0kg
+    custom_model_data: 3026
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  boar_fish:
+    name: "Boar Fish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3027
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  dead_fish:
+    name: "Dead Fish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3028
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  skeleton_fish:
+    name: "Skeleton Fish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: BONE
+    custom_model_data: 3029
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  beanie_leedsicheye:
+    name: "Beanie Leedsicheye"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3030
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  runic_wispeye:
+    name: "Runic Wispeye"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3031
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  waveback_fish:
+    name: "Waveback Fish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: SALMON
+    custom_model_data: 3032
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  night_glider_fish:
+    name: "Night Glider Fish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: COD
+    custom_model_data: 3033
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  sona_fin_fish:
+    name: "Sona Fin Fish"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: TROPICAL_FISH
+    custom_model_data: 3034
+    min_weight: 0.2
+    max_weight: 5
+    min_quality: 10
+    max_quality: 75
+    base_price: 15
+    tier: COMMON
+
+  # ==========================================
+  # TIER: UNCOMMON
+  # ==========================================
+  conch_shell:
+    name: "Conch Shell"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
+    material: NAUTILUS_SHELL
+    custom_model_data: 3035
+    min_weight: 1.5
+    max_weight: 25
     min_quality: 20
-    max_quality: 90
-    base_price: 15.0
+    max_quality: 80
+    base_price: 45
     tier: UNCOMMON
-  
-  # Ikan tier RARE
-  snakehead:
-    name: "Ikan Gabus"
-    description: "Ikan predator air tawar"
+
+  sea_shell:
+    name: "Sea Shell"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: NAUTILUS_SHELL
+    custom_model_data: 3036
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  yellow_damselfish:
+    name: "Yellow Damselfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3037
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  gar_fish:
+    name: "Gar Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
-    custom_model_data: 3102
-    min_weight: 10.0
-    max_weight: 250.0  # Dinaikkan dari 3.0kg
-    min_quality: 30
-    max_quality: 90
-    base_price: 25.0
+    custom_model_data: 3038
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  bandit_angelfish:
+    name: "Bandit Angelfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3039
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  flame_angelfish:
+    name: "Flame Angelfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3040
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  glacerfin_snapper:
+    name: "Glacerfin Snapper"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3041
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  blue_banded_goby:
+    name: "Blue-Banded Goby"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3042
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  cypress_rauta:
+    name: "Cypress Rauta"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3043
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  tricolore_butterfly:
+    name: "Tricolore Butterfly"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3044
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  vintage_damsel:
+    name: "Vintage Damsel"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3045
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  purp_blisfish:
+    name: "Purp Blisfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3046
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  shrimp_goby:
+    name: "Shrimp Goby"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3047
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  bluemato_clownfish:
+    name: "Bluemato Clownfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3048
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  banded_butterfly:
+    name: "Banded Butterfly"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3049
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  arowana:
+    name: "Arowana"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3050
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  magma_goby:
+    name: "Magma Goby"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3051
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  lava_butterfly:
+    name: "Lava Butterfly"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3052
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  salmon:
+    name: "Salmon"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3053
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  flat_fish:
+    name: "Flat Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3054
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  flying_fish:
+    name: "Flying Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: PUFFERFISH
+    custom_model_data: 3055
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  wahoo:
+    name: "Wahoo"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3056
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  maze_angelfish:
+    name: "Maze Angelfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3057
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  lion_fish:
+    name: "Lion Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: PUFFERFISH
+    custom_model_data: 3058
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  rockfish:
+    name: "Rockfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3059
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  coal_tang:
+    name: "Coal Tang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3060
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  orange_basslet:
+    name: "Orange Basslet"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3061
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  racoon_butterfly_fish:
+    name: "Racoon Butterfly Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3062
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  pilot_fish:
+    name: "Pilot Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3063
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  red_snapper:
+    name: "Red Snapper"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3064
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  blackcap_basslet:
+    name: "Blackcap Basslet"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3065
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  silver_tuna:
+    name: "Silver Tuna"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3066
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  dark_eel:
+    name: "Dark Eel"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3067
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  viperfish:
+    name: "Viperfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3068
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  spotted_lantern_fish:
+    name: "Spotted Lantern Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: GLOW_INK_SAC
+    custom_model_data: 3069
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  swordfish:
+    name: "Swordfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3070
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  ancient_arapaima:
+    name: "Ancient Arapaima"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3071
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  apyshorn_fish:
+    name: "Apyshorn Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3072
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  drippy_tucanare:
+    name: "Drippy Tucanare"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3073
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  sail_fish:
+    name: "Sail Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3074
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  water_snake:
+    name: "Water Snake"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: KELP
+    custom_model_data: 3075
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  thinkler_fish:
+    name: "Thinkler Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3076
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  red_goatfish:
+    name: "Red Goatfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3077
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  zebra_snakehead:
+    name: "Zebra Snakehead"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: SALMON
+    custom_model_data: 3078
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  wing_parrotfish:
+    name: "Wing Parrotfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3079
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  foxtrot_koanfish:
+    name: "Foxtrot Koanfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3080
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  doober_fish:
+    name: "Doober Fish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3081
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  baby_shrimp:
+    name: "Baby Shrimp"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: COD
+    custom_model_data: 3082
+    min_weight: 1.5
+    max_weight: 25
+    min_quality: 20
+    max_quality: 80
+    base_price: 45
+    tier: UNCOMMON
+
+  # ==========================================
+  # TIER: RARE
+  # ==========================================
+  korean_angelfish:
+    name: "Korean Angelfish"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
+    material: TROPICAL_FISH
+    custom_model_data: 3083
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
     tier: RARE
-    
-  # Ikan tier EPIC
-  giant_catfish:
-    name: "Lele Raksasa"
-    description: "Lele yang sangat besar, sulit ditangkap"
+
+  ballina_angelfish:
+    name: "Ballina Angelfish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3084
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  barracuda_fish:
+    name: "Barracuda Fish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: SALMON
+    custom_model_data: 3085
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  frog:
+    name: "Frog"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: SLIME_BALL
+    custom_model_data: 3086
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  darwin_clownfish:
+    name: "Darwin Clownfish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3087
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  jewel_tang:
+    name: "Jewel Tang"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: AMETHYST_SHARD
+    custom_model_data: 3088
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  candy_butterfly:
+    name: "Candy Butterfly"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3089
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  fire_goby:
+    name: "Fire Goby"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: BLAZE_POWDER
+    custom_model_data: 3090
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  kau_cardinal:
+    name: "Kau Cardinal"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3091
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  rockform_cardinal:
+    name: "Rockform Cardinal"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3092
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  volsail_tang:
+    name: "Volsail Tang"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3093
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  white_clownfish:
+    name: "White Clownfish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3094
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  scissortail_dartfish:
+    name: "Scissortail Dartfish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3095
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  starfish:
+    name: "Starfish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: PRISMARINE_CRYSTALS
+    custom_model_data: 3096
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  dark_tentacle:
+    name: "Dark Tentacle"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: INK_SAC
+    custom_model_data: 3097
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  charmed_tang:
+    name: "Charmed Tang"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3098
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  parrot_fish:
+    name: "Parrot Fish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3099
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  catfish:
+    name: "Catfish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: COD
+    custom_model_data: 3100
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  sheepshead_fish:
+    name: "Sheepshead Fish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: COD
+    custom_model_data: 3101
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  coney_fish:
+    name: "Coney Fish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3102
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  jellyfish:
+    name: "Jellyfish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: SLIME_BALL
+    custom_model_data: 3103
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  freshwater_piranha:
+    name: "Freshwater Piranha"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: SALMON
+    custom_model_data: 3104
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  mossy_fishlet:
+    name: "Mossy Fishlet"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: MOSS_BLOCK
+    custom_model_data: 3105
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  viperangler_fish:
+    name: "Viperangler Fish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: PUFFERFISH
-    custom_model_data: 3201
-    min_weight: 100.0
-    max_weight: 1000.0  # Dinaikkan dari 20.0kg
+    custom_model_data: 3106
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  boney_eel:
+    name: "Boney Eel"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: BONE
+    custom_model_data: 3107
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  pirate_blue_lobster:
+    name: "Pirate Blue Lobster"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3108
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  toothy_fish:
+    name: "Toothy Fish"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: COD
+    custom_model_data: 3109
+    min_weight: 10
+    max_weight: 100
+    min_quality: 35
+    max_quality: 88
+    base_price: 120
+    tier: RARE
+
+  # ==========================================
+  # TIER: EPIC
+  # ==========================================
+  dorhey_tang:
+    name: "Dorhey Tang"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
+    material: TROPICAL_FISH
+    custom_model_data: 3110
+    min_weight: 50
+    max_weight: 500
     min_quality: 50
-    max_quality: 100
-    base_price: 100.0
+    max_quality: 92
+    base_price: 350
     tier: EPIC
-    
-  # Ikan tier LEGENDARY
-  barracuda:
-    name: "Barracuda"
-    description: "Ikan predator laut yang berbahaya"
+
+  unicorn_tang:
+    name: "Unicorn Tang"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: TROPICAL_FISH
+    custom_model_data: 3111
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  cow_clownfish:
+    name: "Cow Clownfish"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: TROPICAL_FISH
+    custom_model_data: 3112
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  narwhal:
+    name: "Narwhal"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3113
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  moorish_idol:
+    name: "Moorish Idol"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: TROPICAL_FISH
+    custom_model_data: 3114
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  sushi_cardinal:
+    name: "Sushi Cardinal"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: DRIED_KELP
+    custom_model_data: 3115
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  longnose_butterfly:
+    name: "Longnose Butterfly"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: TROPICAL_FISH
+    custom_model_data: 3116
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  firecoal_damsel:
+    name: "Firecoal Damsel"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: MAGMA_CREAM
+    custom_model_data: 3117
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  panther_grouper:
+    name: "Panther Grouper"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: TROPICAL_FISH
+    custom_model_data: 3118
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  domino_damsel:
+    name: "Domino Damsel"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: TROPICAL_FISH
+    custom_model_data: 3119
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  astra_damsel:
+    name: "Astra Damsel"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: ECHO_SHARD
+    custom_model_data: 3120
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  putterfish:
+    name: "Putterfish"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: PUFFERFISH
-    custom_model_data: 3202
-    min_weight: 500.0
-    max_weight: 5000.0  # Dinaikkan dari 15.0kg
-    min_quality: 60
-    max_quality: 100
-    base_price: 120.0
-    tier: LEGENDARY
-    
-  # Tambahkan ikan legendaris baru yang sangat berat
-  giant_whale_shark:
-    name: "Hiu Paus Raksasa"
-    description: "Ikan terbesar yang pernah ditemukan di lautan"
+    custom_model_data: 3121
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  vampire_squid:
+    name: "Vampire Squid"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: GLOW_INK_SAC
+    custom_model_data: 3122
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  monk_fish:
+    name: "Monk Fish"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: PUFFERFISH
-    custom_model_data: 3203
-    min_weight: 1000.0
-    max_weight: 10000.0  # Hingga 10 ton!
-    min_quality: 70
-    max_quality: 100
-    base_price: 500.0
+    custom_model_data: 3123
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  spear_guardian:
+    name: "Spear Guardian"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3124
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  goliath_tiger:
+    name: "Goliath Tiger"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: SALMON
+    custom_model_data: 3125
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  skeleton_angler_fish:
+    name: "Skeleton Angler Fish"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: BONE
+    custom_model_data: 3126
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  blobby_shieldfish:
+    name: "Blobby Shieldfish"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: SHIELD
+    custom_model_data: 3127
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  angrylion_fish:
+    name: "Angrylion Fish"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: PUFFERFISH
+    custom_model_data: 3128
+    min_weight: 50
+    max_weight: 500
+    min_quality: 50
+    max_quality: 92
+    base_price: 350
+    tier: EPIC
+
+  # ==========================================
+  # TIER: LEGENDARY
+  # ==========================================
+  lined_cardinal_fish:
+    name: "Lined Cardinal Fish"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
+    material: TROPICAL_FISH
+    custom_model_data: 3129
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
     tier: LEGENDARY
 
-  # PREHISTORIC FISH
+  yellowfin_tuna:
+    name: "Yellowfin Tuna"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: SALMON
+    custom_model_data: 3130
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  lake_sturgeon:
+    name: "Lake Sturgeon"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: SALMON
+    custom_model_data: 3131
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  bumblebee_grouper:
+    name: "Bumblebee Grouper"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: TROPICAL_FISH
+    custom_model_data: 3132
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  lobster:
+    name: "Lobster"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3133
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  lavafin_tuna:
+    name: "Lavafin Tuna"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: FIRE_CHARGE
+    custom_model_data: 3134
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  chrome_tuna:
+    name: "Chrome Tuna"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: IRON_INGOT
+    custom_model_data: 3135
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  starjam_tang:
+    name: "Starjam Tang"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: NETHER_STAR
+    custom_model_data: 3136
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  greenbee_grouper:
+    name: "Greenbee Grouper"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: TROPICAL_FISH
+    custom_model_data: 3137
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  blue_lobster:
+    name: "Blue Lobster"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: LAPIS_LAZULI
+    custom_model_data: 3138
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  enchanted_angelfish:
+    name: "Enchanted Angelfish"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: EXPERIENCE_BOTTLE
+    custom_model_data: 3139
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  magic_tang:
+    name: "Magic Tang"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: AMETHYST_CLUSTER
+    custom_model_data: 3140
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  ruby:
+    name: "Ruby"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: REDSTONE
+    custom_model_data: 3141
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  axolotl:
+    name: "Axolotl"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: TROPICAL_FISH
+    custom_model_data: 3142
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  synodontis:
+    name: "Synodontis"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: COD
+    custom_model_data: 3143
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  deep_sea_crab:
+    name: "Deep Sea Crab"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: NAUTILUS_SHELL
+    custom_model_data: 3144
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  temple_spokes_tuna:
+    name: "Temple Spokes Tuna"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: PRISMARINE_CRYSTALS
+    custom_model_data: 3145
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  manoai_statue_fish:
+    name: "Manoai Statue Fish"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: STONE
+    custom_model_data: 3146
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  primal_lobster:
+    name: "Primal Lobster"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3147
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  runic_lobster:
+    name: "Runic Lobster"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: ECHO_SHARD
+    custom_model_data: 3148
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  ancient_pufferfish:
+    name: "Ancient Pufferfish"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: PUFFERFISH
+    custom_model_data: 3149
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  primal_axolotl:
+    name: "Primal Axolotl"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: HEART_OF_THE_SEA
+    custom_model_data: 3150
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  runic_axolotl:
+    name: "Runic Axolotl"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: ECHO_SHARD
+    custom_model_data: 3151
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  flying_manta:
+    name: "Flying Manta"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: PHANTOM_MEMBRANE
+    custom_model_data: 3152
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  evolved_enchant_stone:
+    name: "Evolved Enchant Stone"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: ENCHANTED_BOOK
+    custom_model_data: 3153
+    min_weight: 200
+    max_weight: 2500
+    min_quality: 65
+    max_quality: 97
+    base_price: 1200
+    tier: LEGENDARY
+
+  # ==========================================
+  # TIER: MYTHIC
+  # ==========================================
+  dotted_stingray:
+    name: "Dotted Stingray"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
+    material: HEART_OF_THE_SEA
+    custom_model_data: 3154
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  manta_ray:
+    name: "Manta Ray"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: PHANTOM_MEMBRANE
+    custom_model_data: 3155
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  hammerhead_shark:
+    name: "Hammerhead Shark"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3156
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  loggerhead_turtle:
+    name: "Loggerhead Turtle"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: TURTLE_SCUTE
+    custom_model_data: 3157
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  shark:
+    name: "Shark"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3158
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  frostglow_globe_jelly:
+    name: "Frostglow Globe Jelly"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: SEA_LANTERN
+    custom_model_data: 3159
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  prismy_seahorse:
+    name: "Prismy Seahorse"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: PRISMARINE_CRYSTALS
+    custom_model_data: 3160
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  blueflame_ray:
+    name: "Blueflame Ray"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: SOUL_CAMPFIRE
+    custom_model_data: 3161
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  magma_shark:
+    name: "Magma Shark"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: MAGMA_BLOCK
+    custom_model_data: 3162
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  hawks_turtle:
+    name: "Hawks Turtle"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: TURTLE_SCUTE
+    custom_model_data: 3163
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  thresher_shark:
+    name: "Thresher Shark"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3164
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  abyss_seahorse:
+    name: "Abyss Seahorse"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: ECHO_SHARD
+    custom_model_data: 3165
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  blob_fish:
+    name: "Blob Fish"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: SLIME_BALL
+    custom_model_data: 3166
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  crocodile:
+    name: "Crocodile"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: LEATHER
+    custom_model_data: 3167
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  sea_crustacean:
+    name: "Sea Crustacean"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: NAUTILUS_SHELL
+    custom_model_data: 3168
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  runic_sea_crustacean:
+    name: "Runic Sea Crustacean"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: ECHO_SHARD
+    custom_model_data: 3169
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  ancient_squid:
+    name: "Ancient Squid"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: GLOW_INK_SAC
+    custom_model_data: 3170
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  runic_squid:
+    name: "Runic Squid"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: ECHO_SHARD
+    custom_model_data: 3171
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  cavern_dweller:
+    name: "Cavern Dweller"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: DEEPSLATE
+    custom_model_data: 3172
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  primordial_octopus:
+    name: "Primordial Octopus"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: HEART_OF_THE_SEA
+    custom_model_data: 3173
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  flatheaded_whale_shark:
+    name: "Flatheaded Whale Shark"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3174
+    min_weight: 1000
+    max_weight: 10000
+    min_quality: 80
+    max_quality: 100
+    base_price: 4000
+    tier: MYTHIC
+
+  # ==========================================
+  # TIER: SECRET
+  # ==========================================
+  crystal_crab:
+    name: "Crystal Crab"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
+    material: AMETHYST_CLUSTER
+    custom_model_data: 3175
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  orca:
+    name: "Orca"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: HEART_OF_THE_SEA
+    custom_model_data: 3176
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  blob_shark:
+    name: "Blob Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: SLIME_BALL
+    custom_model_data: 3177
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  ghost_shark:
+    name: "Ghost Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: GHAST_TEAR
+    custom_model_data: 3178
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  skeleton_narwhal:
+    name: "Skeleton Narwhal"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: BONE
+    custom_model_data: 3179
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  ghost_worm_fish:
+    name: "Ghost Worm Fish"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: PHANTOM_MEMBRANE
+    custom_model_data: 3180
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  worm_fish:
+    name: "Worm Fish"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: STRING
+    custom_model_data: 3181
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
   megalodon:
     name: "Megalodon"
-    description: "Predator purba terbesar yang pernah berenang di lautan"
-    material: PUFFERFISH
-    custom_model_data: 3301
-    min_weight: 2000.0
-    max_weight: 8000.0
-    min_quality: 70
-    max_quality: 100
-    base_price: 600.0
-    tier: LEGENDARY
-    
-  dunkleosteus:
-    name: "Dunkleosteus"
-    description: "Ikan lapis baja dari zaman Devonian"
-    material: PUFFERFISH
-    custom_model_data: 3302
-    min_weight: 800.0
-    max_weight: 3000.0
-    min_quality: 60
-    max_quality: 100
-    base_price: 400.0
-    tier: EPIC
-    
-  leedsichthys:
-    name: "Leedsichthys"
-    description: "Ikan purba pemakan plankton sebesar bus"
-    material: PUFFERFISH
-    custom_model_data: 3303
-    min_weight: 1500.0
-    max_weight: 7000.0
-    min_quality: 65
-    max_quality: 100
-    base_price: 500.0
-    tier: LEGENDARY
-    
-  helicoprion:
-    name: "Helicoprion"
-    description: "Ikan hiu purba dengan gigi spiral mengerikan"
-    material: PUFFERFISH
-    custom_model_data: 3304
-    min_weight: 400.0
-    max_weight: 1000.0
-    min_quality: 50
-    max_quality: 90
-    base_price: 250.0
-    tier: EPIC
-    
-  xiphactinus:
-    name: "Xiphactinus"
-    description: "Predator buas dari lautan zaman Cretaceous"
-    material: SALMON
-    custom_model_data: 3305
-    min_weight: 300.0
-    max_weight: 800.0
-    min_quality: 45
-    max_quality: 90
-    base_price: 180.0
-    tier: EPIC
-
-  # FRESHWATER FISH
-  arapaima:
-    name: "Arapaima"
-    description: "Ikan air tawar terbesar dari sungai Amazon"
-    material: SALMON
-    custom_model_data: 3401
-    min_weight: 80.0
-    max_weight: 200.0
-    min_quality: 40
-    max_quality: 85
-    base_price: 120.0
-    tier: RARE
-    
-  sturgeon:
-    name: "Ikan Sturgeon"
-    description: "Ikan kuno penghasil kaviar terbaik"
-    material: SALMON
-    custom_model_data: 3402
-    min_weight: 100.0
-    max_weight: 500.0
-    min_quality: 45
-    max_quality: 90
-    base_price: 200.0
-    tier: RARE
-    
-  alligator_gar:
-    name: "Alligator Gar"
-    description: "Ikan purba berpenampilan seperti buaya"
-    material: SALMON
-    custom_model_data: 3403
-    min_weight: 60.0
-    max_weight: 150.0
-    min_quality: 35
-    max_quality: 80
-    base_price: 90.0
-    tier: RARE
-    
-  piranha:
-    name: "Piranha"
-    description: "Ikan pemangsa kecil dengan gigitan mematikan"
-    material: COD
-    custom_model_data: 3404
-    min_weight: 0.8
-    max_weight: 3.0
-    min_quality: 20
-    max_quality: 75
-    base_price: 15.0
-    tier: UNCOMMON
-    
-  catfish_giant:
-    name: "Lele Raksasa Mekong"
-    description: "Ikan lele terbesar di dunia"
-    material: PUFFERFISH
-    custom_model_data: 3405
-    min_weight: 150.0
-    max_weight: 350.0
-    min_quality: 45
-    max_quality: 90
-    base_price: 180.0
-    tier: EPIC
-
-  # SALTWATER FISH
-  tuna_bluefin:
-    name: "Tuna Sirip Biru"
-    description: "Ikan tercepat dan paling berharga di lautan"
-    material: SALMON
-    custom_model_data: 3501
-    min_weight: 200.0
-    max_weight: 700.0
-    min_quality: 50
-    max_quality: 95
-    base_price: 350.0
-    tier: EPIC
-    
-  marlin:
-    name: "Marlin Biru"
-    description: "Ikan pedang yang sangat kuat dan cepat"
-    material: SALMON
-    custom_model_data: 3502
-    min_weight: 150.0
-    max_weight: 800.0
-    min_quality: 55
-    max_quality: 95
-    base_price: 300.0
-    tier: EPIC
-    
-  swordfish:
-    name: "Ikan Pedang"
-    description: "Predator dengan moncong tajam seperti pedang"
-    material: SALMON
-    custom_model_data: 3503
-    min_weight: 100.0
-    max_weight: 500.0
-    min_quality: 45
-    max_quality: 90
-    base_price: 200.0
-    tier: RARE
-    
-  oarfish:
-    name: "Ikan Dayung"
-    description: "Ikan laut dalam yang sangat langka dan misterius"
-    material: SALMON
-    custom_model_data: 3504
-    min_weight: 70.0
-    max_weight: 300.0
-    min_quality: 65
-    max_quality: 95
-    base_price: 400.0
-    tier: EPIC
-    
-  manta_ray:
-    name: "Pari Manta"
-    description: "Pari raksasa yang anggun di lautan"
-    material: PUFFERFISH
-    custom_model_data: 3505
-    min_weight: 800.0
-    max_weight: 2000.0
-    min_quality: 50
-    max_quality: 90
-    base_price: 300.0
-    tier: EPIC
-
-  # STEAMPUNK FISH
-  clockwork_salmon:
-    name: "Salmon Mekanis"
-    description: "Ikan dengan gigi roda dan tubuh dari kuningan"
-    material: SALMON
-    custom_model_data: 3601
-    min_weight: 5.0
-    max_weight: 25.0
-    min_quality: 60
-    max_quality: 100
-    base_price: 250.0
-    tier: EPIC
-    
-  steam_puffer:
-    name: "Buntal Uap"
-    description: "Mengeluarkan asap saat merasa terancam"
-    material: PUFFERFISH
-    custom_model_data: 3602
-    min_weight: 2.0
-    max_weight: 15.0
-    min_quality: 55
-    max_quality: 95
-    base_price: 180.0
-    tier: RARE
-    
-  brass_barracuda:
-    name: "Barracuda Kuningan"
-    description: "Predator bertenaga boiler dengan gigi baja"
-    material: SALMON
-    custom_model_data: 3603
-    min_weight: 20.0
-    max_weight: 100.0
-    min_quality: 65
-    max_quality: 100
-    base_price: 300.0
-    tier: EPIC
-    
-  copper_carp:
-    name: "Karper Tembaga"
-    description: "Ikan hias dengan sisik berkilau seperti koin"
-    material: COD
-    custom_model_data: 3604
-    min_weight: 1.0
-    max_weight: 10.0
-    min_quality: 40
-    max_quality: 85
-    base_price: 80.0
-    tier: UNCOMMON
-    
-  iron_eel:
-    name: "Belut Besi"
-    description: "Mampu menghasilkan aliran listrik kuat"
-    material: SALMON
-    custom_model_data: 3605
-    min_weight: 8.0
-    max_weight: 30.0
-    min_quality: 50
-    max_quality: 90
-    base_price: 150.0
-    tier: RARE
-
-  # MEDIEVAL/FANTASY FISH
-  dragon_fish:
-    name: "Ikan Naga"
-    description: "Ikan langka dengan sisik layaknya naga"
-    material: PUFFERFISH
-    custom_model_data: 3701
-    min_weight: 100.0
-    max_weight: 1000.0
-    min_quality: 70
-    max_quality: 100
-    base_price: 500.0
-    tier: LEGENDARY
-    
-  royal_goldfish:
-    name: "Ikan Emas Kerajaan"
-    description: "Hanya ditemukan di kolam istana kuno"
-    material: COD
-    custom_model_data: 3702
-    min_weight: 0.5
-    max_weight: 5.0
-    min_quality: 80
-    max_quality: 100
-    base_price: 200.0
-    tier: RARE
-    
-  kraken_spawn:
-    name: "Anak Kraken"
-    description: "Bayi gurita raksasa dari legenda pelaut"
-    material: PUFFERFISH
-    custom_model_data: 3703
-    min_weight: 50.0
-    max_weight: 500.0
-    min_quality: 75
-    max_quality: 100
-    base_price: 450.0
-    tier: LEGENDARY
-    
-  enchanted_trout:
-    name: "Trout Ajaib"
-    description: "Trout dengan sisik yang berkilau seperti kristal"
-    material: SALMON
-    custom_model_data: 3704
-    min_weight: 3.0
-    max_weight: 20.0
-    min_quality: 60
-    max_quality: 95
-    base_price: 120.0
-    tier: RARE
-    
-  basilisk_eel:
-    name: "Belut Basilisk"
-    description: "Bisa membatu mangsa dengan tatapannya"
-    material: SALMON
-    custom_model_data: 3705
-    min_weight: 10.0
-    max_weight: 50.0
-    min_quality: 65
-    max_quality: 95
-    base_price: 280.0
-    tier: EPIC
-
-  # SCI-FI FISH
-  alien_angler:
-    name: "Pemancing Alien"
-    description: "Ikan dari planet lain dengan lampu bioluminesensi"
-    material: PUFFERFISH
-    custom_model_data: 3801
-    min_weight: 5.0
-    max_weight: 30.0
-    min_quality: 75
-    max_quality: 100
-    base_price: 350.0
-    tier: EPIC
-    
-  quantum_cod:
-    name: "Kod Kuantum"
-    description: "Bisa berada di beberapa lokasi sekaligus"
-    material: COD
-    custom_model_data: 3802
-    min_weight: 1.0
-    max_weight: 8.0
-    min_quality: 60
-    max_quality: 95
-    base_price: 180.0
-    tier: RARE
-    
-  galactic_ray:
-    name: "Pari Galaksi"
-    description: "Tubuhnya berisi taburan bintang dan nebula"
-    material: PUFFERFISH
-    custom_model_data: 3803
-    min_weight: 200.0
-    max_weight: 1000.0
-    min_quality: 85
-    max_quality: 100
-    base_price: 600.0
-    tier: LEGENDARY
-    
-  plasma_piranha:
-    name: "Piranha Plasma"
-    description: "Ikan dengan gigitan sedingin es namun sepanas matahari"
-    material: COD
-    custom_model_data: 3804
-    min_weight: 0.5
-    max_weight: 3.0
-    min_quality: 70
-    max_quality: 95
-    base_price: 120.0
-    tier: RARE
-    
-  android_angelfish:
-    name: "Angelfish Android"
-    description: "Perpaduan teknologi canggih dan kehidupan akuatik"
-    material: TROPICAL_FISH
-    custom_model_data: 3805
-    min_weight: 1.0
-    max_weight: 5.0
-    min_quality: 75
-    max_quality: 100
-    base_price: 200.0
-    tier: EPIC
-
-  # MYTHOLOGICAL FISH
-  poseidon_bass:
-    name: "Bass Poseidon"
-    description: "Konon adalah mata-mata dewa laut"
-    material: SALMON
-    custom_model_data: 3901
-    min_weight: 50.0
-    max_weight: 300.0
-    min_quality: 80
-    max_quality: 100
-    base_price: 400.0
-    tier: LEGENDARY
-    
-  phoenix_fish:
-    name: "Ikan Phoenix"
-    description: "Dapat hidup di air mendidih dan membangkitkan diri"
-    material: TROPICAL_FISH
-    custom_model_data: 3902
-    min_weight: 10.0
-    max_weight: 50.0
-    min_quality: 85
-    max_quality: 100
-    base_price: 450.0
-    tier: LEGENDARY
-    
-  hydra_eel:
-    name: "Belut Hydra"
-    description: "Memiliki tujuh kepala yang bisa tumbuh kembali"
-    material: PUFFERFISH
-    custom_model_data: 3903
-    min_weight: 70.0
-    max_weight: 350.0
-    min_quality: 75
-    max_quality: 100
-    base_price: 380.0
-    tier: LEGENDARY
-    
-  chimera_fish:
-    name: "Ikan Chimera"
-    description: "Perpaduan dari tiga jenis ikan berbeda"
-    material: PUFFERFISH
-    custom_model_data: 3904
-    min_weight: 30.0
-    max_weight: 150.0
-    min_quality: 70
-    max_quality: 95
-    base_price: 300.0
-    tier: EPIC
-    
-  leviathan_spawn:
-    name: "Anak Leviathan"
-    description: "Anak dari monster laut terbesar dalam mitologi"
-    material: PUFFERFISH
-    custom_model_data: 3905
-    min_weight: 1000.0
-    max_weight: 5000.0
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: NETHER_STAR
+    custom_model_data: 3182
+    min_weight: 2000
+    max_weight: 25000
     min_quality: 90
     max_quality: 100
-    base_price: 800.0
-    tier: LEGENDARY
+    base_price: 12500
+    tier: SECRET
 
-  # SPECIAL RARE FISH
-  golden_koi:
-    name: "Koi Emas"
-    description: "Dipercaya membawa keberuntungan dan kekayaan"
-    material: TROPICAL_FISH
-    custom_model_data: 4001
-    min_weight: 5.0
-    max_weight: 20.0
+  1x1x1x1_comet_shark:
+    name: "1x1x1x1 Comet Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: NETHER_STAR
+    custom_model_data: 3183
+    min_weight: 2000
+    max_weight: 25000
     min_quality: 90
     max_quality: 100
-    base_price: 500.0
-    tier: LEGENDARY
-    
-  rainbow_salmon:
-    name: "Salmon Pelangi"
-    description: "Ikan dengan sisik berwarna-warni seperti pelangi"
-    material: SALMON
-    custom_model_data: 4002
-    min_weight: 10.0
-    max_weight: 30.0
-    min_quality: 85
-    max_quality: 100
-    base_price: 450.0
-    tier: LEGENDARY
-    
-  ancient_guardian:
-    name: "Penjaga Kuno"
-    description: "Ikan tertua di dunia, saksi sejarah ribuan tahun"
-    material: PUFFERFISH
-    custom_model_data: 4003
-    min_weight: 500.0
-    max_weight: 2000.0
-    min_quality: 95
-    max_quality: 100
-    base_price: 1000.0
-    tier: LEGENDARY
-    
-  crystal_fish:
-    name: "Ikan Kristal"
-    description: "Tubuh transparan seperti kristal murni"
-    material: TROPICAL_FISH
-    custom_model_data: 4004
-    min_weight: 1.0
-    max_weight: 5.0
-    min_quality: 80
-    max_quality: 100
-    base_price: 300.0
-    tier: EPIC
-    
-  abyssal_horror:
-    name: "Horor Palung"
-    description: "Makhluk mengerikan dari palung terdalam"
-    material: PUFFERFISH
-    custom_model_data: 4005
-    min_weight: 300.0
-    max_weight: 1500.0
-    min_quality: 75
-    max_quality: 100
-    base_price: 700.0
-    tier: LEGENDARY
+    base_price: 12500
+    tier: SECRET
 
-  samudera_mythic:
-    name: "Naga Samudra Purba"
-    description: "Entitas mistik penjaga palung terdalam yang melegenda"
-    material: PUFFERFISH
-    custom_model_data: 4009
-    min_weight: 1000.0
-    max_weight: 5000.0
-    min_quality: 95
+  bloodmoon_whale:
+    name: "Bloodmoon Whale"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: REDSTONE_BLOCK
+    custom_model_data: 3184
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
     max_quality: 100
-    base_price: 2500.0
-    tier: MYTHIC
+    base_price: 12500
+    tier: SECRET
+
+  lochness_monster:
+    name: "Lochness Monster"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: HEART_OF_THE_SEA
+    custom_model_data: 3185
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  monster_shark:
+    name: "Monster Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: NETHER_STAR
+    custom_model_data: 3186
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  eerie_shark:
+    name: "Eerie Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: ECHO_SHARD
+    custom_model_data: 3187
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  great_whale:
+    name: "Great Whale"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: HEART_OF_THE_SEA
+    custom_model_data: 3188
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  frostborn_shark:
+    name: "Frostborn Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: BLUE_ICE
+    custom_model_data: 3189
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  armored_shark:
+    name: "Armored Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: NETHERITE_INGOT
+    custom_model_data: 3190
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  scare:
+    name: "Scare"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: JACK_O_LANTERN
+    custom_model_data: 3191
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  queen_crab:
+    name: "Queen Crab"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: NAUTILUS_SHELL
+    custom_model_data: 3192
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  king_crab:
+    name: "King Crab"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: NAUTILUS_SHELL
+    custom_model_data: 3193
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  cryoshade_glider:
+    name: "Cryoshade Glider"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: PACKED_ICE
+    custom_model_data: 3194
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  panther_eel:
+    name: "Panther Eel"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: BLACK_DYE
+    custom_model_data: 3195
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  giant_squid:
+    name: "Giant Squid"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: GLOW_INK_SAC
+    custom_model_data: 3196
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  depthseeker_ray:
+    name: "Depthseeker Ray"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: ECHO_SHARD
+    custom_model_data: 3197
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  robot_kraken:
+    name: "Robot Kraken"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: BEACON
+    custom_model_data: 3198
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  mosasaur_shark:
+    name: "Mosasaur Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: PRISMARINE_CRYSTALS
+    custom_model_data: 3199
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  king_jelly:
+    name: "King Jelly"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: SLIME_BLOCK
+    custom_model_data: 3200
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  bone_whale:
+    name: "Bone Whale"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: BONE_BLOCK
+    custom_model_data: 3201
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  elshark_gran_maja:
+    name: "Elshark Gran Maja"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: NETHER_STAR
+    custom_model_data: 3202
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  ancient_whale:
+    name: "Ancient Whale"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: HEART_OF_THE_SEA
+    custom_model_data: 3203
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  gladiator_shark:
+    name: "Gladiator Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: NETHERITE_SWORD
+    custom_model_data: 3204
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  ancient_lochness_monster:
+    name: "Ancient Lochness Monster"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: HEART_OF_THE_SEA
+    custom_model_data: 3205
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  talon_serpent:
+    name: "Talon Serpent"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: PRISMARINE_SHARD
+    custom_model_data: 3206
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  strawberry_choc_megalodon:
+    name: "Strawberry Choc Megalodon"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: COCOA_BEANS
+    custom_model_data: 3207
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  krampus_shark:
+    name: "Krampus Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: COAL_BLOCK
+    custom_model_data: 3208
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  emerald_winter_whale:
+    name: "Emerald Winter Whale"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: EMERALD_BLOCK
+    custom_model_data: 3209
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  winter_frost_shark:
+    name: "Winter Frost Shark"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: ICE
+    custom_model_data: 3210
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
+
+  icebreaker_whale:
+    name: "Icebreaker Whale"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
+    material: BLUE_ICE
+    custom_model_data: 3211
+    min_weight: 2000
+    max_weight: 25000
+    min_quality: 90
+    max_quality: 100
+    base_price: 12500
+    tier: SECRET
 
 # Pengaturan lokasi spesial
 special_locations:
@@ -773,15 +3048,3 @@ special_locations:
     name: "Danau Kuno"
     description: "Danau legendaris dengan ikan langka"
     fish_multiplier: 1.5
-    rare_fish_chance: 0.2
-    special_fish: [ancient_carp]
-    
-  deep_sea:
-    center_x: -500
-    center_z: 300
-    radius: 100
-    name: "Laut Dalam"
-    description: "Perairan dalam dengan ikan-ikan eksotis"
-    fish_multiplier: 2.0
-    rare_fish_chance: 0.3
-    special_fish: [giant_tuna, marlin]

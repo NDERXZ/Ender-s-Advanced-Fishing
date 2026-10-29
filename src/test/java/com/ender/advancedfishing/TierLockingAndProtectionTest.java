@@ -69,4 +69,16 @@ public class TierLockingAndProtectionTest {
         assertFalse("Null item should not be flagged as custom fish", 
                 ItemProtectionListener.isCustomFish(null));
     }
+
+    @Test
+    public void testRodSpecialAbilityProperties() {
+        FishingRod rodWithAbility = new FishingRod(
+                "astral_rod", "Astral Rod", "Cosmic rod",
+                1020, 3500, 0.35, FishingRod.RodTier.MASTER,
+                true, "+25% peluang ikan kualitas di atas 90%", 350000.0, 5, 5000.0
+        );
+        assertTrue(rodWithAbility.hasSpecialAbility());
+        assertEquals("+25% peluang ikan kualitas di atas 90%", rodWithAbility.getSpecialAbilityDescription());
+        assertEquals(5, rodWithAbility.getLureLevel());
+    }
 }

@@ -406,6 +406,11 @@ public class FishingManager {
         if (rod != null) {
             totalTierBoost += rod.getTier().getTierBoost();
             qualityBoost *= rod.getQualityBoost();
+            if (rod.hasSpecialAbility()) {
+                totalTierBoost += 1;
+                qualityBoost *= 1.15;
+                weightBoost *= 1.15;
+            }
         } else {
             // Default values for vanilla rod - reduced penalty to help players
             totalTierBoost = 0;
@@ -494,9 +499,17 @@ public class FishingManager {
         // IMPORTANT: If no fish matches criteria, return at least a common fish
         // This ensures vanilla rods always catch something
         if (availableFish.isEmpty()) {
-            CustomFish defaultFish = configManager.getCustomFishes().get("small_carp");
-            if (defaultFish == null && !configManager.getCustomFishes().isEmpty()) {
-                defaultFish = configManager.getCustomFishes().values().iterator().next();
+            CustomFish defaultFish = null;
+            for (CustomFish candidate : configManager.getCustomFishes().values()) {
+                if (rod == null) {
+                    if (candidate.getBaseTier() == CustomFish.FishTier.COMMON || candidate.getBaseTier() == CustomFish.FishTier.UNCOMMON) {
+                        defaultFish = candidate;
+                        break;
+                    }
+                } else if (rod.isTierAllowed(candidate.getBaseTier())) {
+                    defaultFish = candidate;
+                    break;
+                }
             }
             if (defaultFish != null) {
                 return defaultFish.createCaughtInstance(totalTierBoost, qualityBoost, weightBoost);
@@ -517,10 +530,18 @@ public class FishingManager {
             }
         }
         
-        // Fallback to return a basic fish
-        CustomFish fallbackFish = configManager.getCustomFishes().get("small_carp");
-        if (fallbackFish == null && !configManager.getCustomFishes().isEmpty()) {
-            fallbackFish = configManager.getCustomFishes().values().iterator().next();
+        // Fallback to return an allowed fish respecting Tier Locking
+        CustomFish fallbackFish = null;
+        for (CustomFish candidate : configManager.getCustomFishes().values()) {
+            if (rod == null) {
+                if (candidate.getBaseTier() == CustomFish.FishTier.COMMON || candidate.getBaseTier() == CustomFish.FishTier.UNCOMMON) {
+                    fallbackFish = candidate;
+                    break;
+                }
+            } else if (rod.isTierAllowed(candidate.getBaseTier())) {
+                fallbackFish = candidate;
+                break;
+            }
         }
         if (fallbackFish != null) {
             return fallbackFish.createCaughtInstance(totalTierBoost, qualityBoost, weightBoost);

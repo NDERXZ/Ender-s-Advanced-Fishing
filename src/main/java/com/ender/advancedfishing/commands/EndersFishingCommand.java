@@ -130,6 +130,44 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                 
                 return giveRod((Player) sender, rodId, rodAmount);
                 
+            case "fish":
+                if (!sender.hasPermission("eaf.admin")) {
+                    sender.sendMessage(TextUtil.color("&cKamu tidak memiliki izin untuk menggunakan perintah ini!"));
+                    return true;
+                }
+                if (args.length < 2) {
+                    sender.sendMessage(TextUtil.color("&cPenggunaan: /eaf fish <id> [pemain] [jumlah]"));
+                    return true;
+                }
+                String fishId = args[1].toLowerCase();
+                Player recipientPlayer = (sender instanceof Player) ? (Player) sender : null;
+                int fishAmount = 1;
+                if (args.length > 2) {
+                    Player parsed = org.bukkit.Bukkit.getPlayer(args[2]);
+                    if (parsed != null) {
+                        recipientPlayer = parsed;
+                        if (args.length > 3) {
+                            try { fishAmount = Integer.parseInt(args[3]); } catch (NumberFormatException ignored) {}
+                        }
+                    } else {
+                        try { fishAmount = Integer.parseInt(args[2]); } catch (NumberFormatException ignored) {}
+                    }
+                }
+                if (recipientPlayer == null) {
+                    sender.sendMessage(TextUtil.color("&cTentukan pemain penerima ikan!"));
+                    return true;
+                }
+                com.ender.advancedfishing.fishing.model.CustomFish fishModel = plugin.getConfigManager().getCustomFishes().get(fishId);
+                if (fishModel == null) {
+                    sender.sendMessage(TextUtil.color("&cIkan dengan ID '&e" + fishId + "&c' tidak ditemukan!"));
+                    return true;
+                }
+                for (int i = 0; i < Math.max(1, fishAmount); i++) {
+                    recipientPlayer.getInventory().addItem(fishModel.createCaughtInstance(0, 0, 0).createItemStack());
+                }
+                sender.sendMessage(TextUtil.oceanic("[ ɪᴋᴀɴ ᴋᴜsᴛᴏᴍ ]") + TextUtil.color(" &aMemberikan &f" + fishAmount + "x &e" + fishModel.getName() + " &ake &f" + recipientPlayer.getName()));
+                return true;
+
             case "bait":
                 // Berikan umpan
                 if (!(sender instanceof Player)) {
@@ -433,7 +471,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
             case "journal":
             case "codex":
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage("Â§cPerintah ini hanya dapat digunakan oleh pemain!");
+                    sender.sendMessage("§cPerintah ini hanya dapat digunakan oleh pemain!");
                     return true;
                 }
                 new JournalGUI((Player) sender, plugin).open();
@@ -441,7 +479,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
 
             case "chum":
                 if (!sender.hasPermission("eaf.admin") && !sender.hasPermission("eaf.chum")) {
-                    sender.sendMessage("Â§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
+                    sender.sendMessage("§cKamu tidak memiliki izin untuk menggunakan perintah ini!");
                     return true;
                 }
                 Player targetPlayer = null;
@@ -457,7 +495,7 @@ public class EndersFishingCommand implements CommandExecutor, TabCompleter {
                     } catch (NumberFormatException ignored) {}
                 }
                 if (targetPlayer == null) {
-                    sender.sendMessage("Â§cPemain tidak ditemukan!");
+                    sender.sendMessage("§cPemain tidak ditemukan!");
                     return true;
                 }
                 targetPlayer.getInventory().addItem(ChumBucketManager.createChumBucket(amount));

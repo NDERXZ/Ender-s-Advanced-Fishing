@@ -55,7 +55,9 @@ dimensions:
     - NORMAL # Dimensi Overworld
     # - NETHER
     # - THE_END
-  allowed_worlds: [] # Daftar nama world spesifik (kosong = semua world dengan tipe di atas)
+  # Daftar nama world spesifik (kosong = semua world dengan tipe di atas).
+  # Contoh untuk server dengan Multiverse-Core: [overworld, survival] (jika ingin mengecualikan world spawn / minigame).
+  allowed_worlds: []
 
 # Economy settings
 economy:

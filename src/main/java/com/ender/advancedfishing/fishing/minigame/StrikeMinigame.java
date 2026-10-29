@@ -32,6 +32,7 @@ public class StrikeMinigame {
     // Minigame state data
     private final Map<UUID, Integer> requiredClicks;
     private final Map<UUID, Integer> currentClicks;
+    private final Map<UUID, Long> lastClickTimes;
     
     private final Random random = new Random();
     
@@ -45,6 +46,7 @@ public class StrikeMinigame {
         this.pendingDurabilityLoss = new HashMap<>();
         this.requiredClicks = new HashMap<>();
         this.currentClicks = new HashMap<>();
+        this.lastClickTimes = new HashMap<>();
     }
     
     /**
@@ -80,7 +82,7 @@ public class StrikeMinigame {
             TextUtil.color("&7ᴛᴀʀɪᴋ sᴇɴᴀʀ: &8[ &b0 &7/ &e" + clicks + " &8] &8| &7ᴛᴇʀsɪsᴀ &f" + clicks + " ᴋʟɪᴋ"), 
             5, 30, 5
         );
-        sendActionBarMessage(player, TextUtil.oceanic("« ᴋʟɪᴋ ᴋɪʀɪ sᴇʙᴀɴʏᴀᴋ " + clicks + " ᴋᴀʟɪ ʟᴀɢɪ »"));
+        sendActionBarMessage(player, TextUtil.oceanic("« ᴛᴀʀɪᴋ sᴇɴᴀʀ (ᴋʟɪᴋ): " + clicks + " ᴋᴀʟɪ »"));
         
         updateProgressDisplay(player, MAX_TIME_SECONDS);
         
@@ -104,7 +106,7 @@ public class StrikeMinigame {
     }
     
     /**
-     * Handle player left click to progress the minigame
+     * Handle player click (left-click or Bedrock reel/tap) to progress the minigame
      */
     public boolean handleClick(Player player) {
         UUID playerId = player.getUniqueId();
@@ -112,6 +114,13 @@ public class StrikeMinigame {
         if (!isPlayerInMinigame(playerId)) {
             return false;
         }
+
+        long now = System.currentTimeMillis();
+        long lastClick = lastClickTimes.getOrDefault(playerId, 0L);
+        if (now - lastClick < 80L) {
+            return true; // Debounce duplicate events in same tick
+        }
+        lastClickTimes.put(playerId, now);
         
         int currentClickCount = currentClicks.getOrDefault(playerId, 0) + 1;
         int requiredClicksCount = requiredClicks.getOrDefault(playerId, 10);
@@ -127,7 +136,7 @@ public class StrikeMinigame {
         int remaining = Math.max(0, requiredClicksCount - currentClickCount);
         
         player.playSound(player.getLocation(), Sound.BLOCK_CHAIN_STEP, 0.6f, 1.2f);
-        sendActionBarMessage(player, TextUtil.oceanic("« ᴋʟɪᴋ ᴋɪʀɪ sᴇʙᴀɴʏᴀᴋ " + remaining + " ᴋᴀʟɪ ʟᴀɢɪ »"));
+        sendActionBarMessage(player, TextUtil.oceanic("« ᴛᴀʀɪᴋ sᴇɴᴀʀ (ᴋʟɪᴋ): sɪsᴀ " + remaining + " ᴋᴀʟɪ »"));
         updateProgressDisplay(player, 10);
         return true;
     }
@@ -306,6 +315,7 @@ public class StrikeMinigame {
     
     private void cancelActiveGame(Player player) {
         UUID playerId = player.getUniqueId();
+        lastClickTimes.remove(playerId);
         BukkitTask task = activeTasks.remove(playerId);
         if (task != null) {
             task.cancel();
@@ -319,6 +329,7 @@ public class StrikeMinigame {
     public void cleanupPlayer(Player player) {
         cancelActiveGame(player);
         UUID playerId = player.getUniqueId();
+        lastClickTimes.remove(playerId);
         pendingFish.remove(playerId);
         pendingRods.remove(playerId);
         pendingDurabilityLoss.remove(playerId);

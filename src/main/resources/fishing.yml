@@ -13,7 +13,7 @@ config_version: "1.4"
 fishing_rods:
   admin_dev_rod:
     name: "Admin Dev Rod"
-    description: "Joran pancing khusus Admin Dev Rod"
+    description: "Joran master pengembang server dengan daya pikat dan ketahanan mutlak."
     custom_model_data: 1001
     durability: 10000
     stamina_modifier: 0.15
@@ -21,14 +21,14 @@ fishing_rods:
     allowed_tiers:
       - SECRET
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+50% peluang elevasi tier & kapasitas tarikan tanpa batas"
     price: 2000000
     lure_level: 7
     max_weight_capacity: 150000
 
   celestal_angelic_rod:
     name: "Angelic Rod"
-    description: "Joran pancing khusus Angelic Rod"
+    description: "Joran berdaya surgawi bertabur bulu malaikat, memancarkan berkah tangkapan rahasia."
     custom_model_data: 1002
     durability: 10000
     stamina_modifier: 0.15
@@ -36,14 +36,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+25% peluang memanggil ikan tier Secret dan Mythic"
     price: 2000000
     lure_level: 7
     max_weight_capacity: 150000
 
   celestal_gold_rod:
     name: "Gold Rod"
-    description: "Joran pancing khusus Gold Rod"
+    description: "Joran bersepuh emas murni kerajaan langit, menarik tangkapan bernilai tinggi."
     custom_model_data: 1003
     durability: 10000
     stamina_modifier: 0.15
@@ -51,14 +51,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+20% pengali harga jual ikan yang ditangkap"
     price: 2000000
     lure_level: 7
     max_weight_capacity: 150000
 
   celestal_hyper_rod:
     name: "Hyper Rod"
-    description: "Joran pancing khusus Hyper Rod"
+    description: "Joran bermuatan partikel kosmik hiperaktif untuk akselerasi sambaran ikan."
     custom_model_data: 1004
     durability: 10000
     stamina_modifier: 0.15
@@ -66,14 +66,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+30% kecepatan reaksi strike minigame"
     price: 2000000
     lure_level: 7
     max_weight_capacity: 150000
 
   common_carbon_rod:
     name: "Carbon Rod"
-    description: "Joran pancing khusus Carbon Rod"
+    description: "Joran serat karbon modern yang ringan dan seimbang untuk pemula."
     custom_model_data: 1005
     durability: 250
     stamina_modifier: 0.85
@@ -88,7 +88,7 @@ fishing_rods:
 
   common_luck_rod:
     name: "Luck Rod"
-    description: "Joran pancing khusus Luck Rod"
+    description: "Joran kayu dengan jimat keberuntungan sederhana di ujung pegangan."
     custom_model_data: 1006
     durability: 250
     stamina_modifier: 0.85
@@ -103,7 +103,7 @@ fishing_rods:
 
   common_starter_rod:
     name: "Starter Rod"
-    description: "Joran pancing khusus Starter Rod"
+    description: "Joran kayu standar pemula untuk memulai petualangan memancing."
     custom_model_data: 1007
     durability: 250
     stamina_modifier: 0.85
@@ -118,7 +118,7 @@ fishing_rods:
 
   common_toy_rod:
     name: "Toy Rod"
-    description: "Joran pancing khusus Toy Rod"
+    description: "Joran plastik miniatur yang fleksibel untuk memancing di perairan tenang."
     custom_model_data: 1008
     durability: 250
     stamina_modifier: 0.85
@@ -133,7 +133,7 @@ fishing_rods:
 
   epic_chrome_rod:
     name: "Chrome Rod"
-    description: "Joran pancing khusus Chrome Rod"
+    description: "Joran paduan kromium tahan karat industri berat, kuat menahan ikan berbobot ratusan kilogram."
     custom_model_data: 1009
     durability: 2000
     stamina_modifier: 0.4
@@ -151,7 +151,7 @@ fishing_rods:
 
   epic_steampunk_rod:
     name: "Steampunk Rod"
-    description: "Joran pancing khusus Steampunk Rod"
+    description: "Joran bertenaga uap dengan roda gigi kuningan antik untuk menarik ikan bertenaga besar."
     custom_model_data: 1010
     durability: 2000
     stamina_modifier: 0.4
@@ -169,7 +169,7 @@ fishing_rods:
 
   forgotten_withering_rod:
     name: "Withering Rod"
-    description: "Joran pancing khusus Withering Rod"
+    description: "Joran terkutuk bertatahkan tulang Nether, memikat predator gelap samudra purba."
     custom_model_data: 1011
     durability: 10000
     stamina_modifier: 0.15
@@ -177,14 +177,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+20% peluang ikan langka di malam hari"
     price: 2000000
     lure_level: 7
     max_weight_capacity: 150000
 
   legendary_astral_rod:
     name: "Astral Rod"
-    description: "Joran pancing khusus Astral Rod"
+    description: "Joran yang ditempa dari serpihan meteorit kosmik berselimut debu bintang."
     custom_model_data: 1012
     durability: 3500
     stamina_modifier: 0.3
@@ -197,14 +197,14 @@ fishing_rods:
       - LEGENDARY
       - MYTHIC
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+25% peluang ikan kualitas di atas 90%"
     price: 275000
     lure_level: 5
     max_weight_capacity: 20000
 
   legendary_fluorescent_rod:
     name: "Fluorescent Rod"
-    description: "Joran pancing khusus Fluorescent Rod"
+    description: "Joran berpendar fosfor neon terang, menembus kegelapan palung laut malam."
     custom_model_data: 1013
     durability: 3500
     stamina_modifier: 0.3
@@ -217,14 +217,14 @@ fishing_rods:
       - LEGENDARY
       - MYTHIC
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+20% peluang ikan langka di cuaca hujan atau badai"
     price: 275000
     lure_level: 5
     max_weight_capacity: 20000
 
   legendary_hazmat_rod:
     name: "Hazmat Rod"
-    description: "Joran pancing khusus Hazmat Rod"
+    description: "Joran berselubung polimer pelindung racun, tahan di perairan paling ekstrem."
     custom_model_data: 1014
     durability: 3500
     stamina_modifier: 0.3
@@ -237,14 +237,14 @@ fishing_rods:
       - LEGENDARY
       - MYTHIC
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+20% kapasitas bobot maksimal ikan"
     price: 275000
     lure_level: 5
     max_weight_capacity: 20000
 
   mythic_angler_rod:
     name: "Angler Rod"
-    description: "Joran pancing khusus Angler Rod"
+    description: "Joran lentera purba bercahaya bioluminesensi pemanggil penguasa palung laut."
     custom_model_data: 1015
     durability: 6000
     stamina_modifier: 0.2
@@ -252,14 +252,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+35% peluang mendapatkan ikan Mythic dan monster laut"
     price: 750000
     lure_level: 6
     max_weight_capacity: 60000
 
   mythic_ares_rod:
     name: "Ares Rod"
-    description: "Joran pancing khusus Ares Rod"
+    description: "Joran perang berhiaskan rubi merah membara, menaklukkan ikan monster buas."
     custom_model_data: 1016
     durability: 6000
     stamina_modifier: 0.2
@@ -267,14 +267,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+30% bobot ikan tangkapan saat cuaca badai"
     price: 750000
     lure_level: 6
     max_weight_capacity: 60000
 
   mythic_bamboo_rod:
     name: "Bamboo Rod"
-    description: "Joran pancing khusus Bamboo Rod"
+    description: "Joran bambu pusaka berumur ribuan tahun dengan kelenturan spiritual sempurna."
     custom_model_data: 1017
     durability: 6000
     stamina_modifier: 0.2
@@ -282,14 +282,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "-40% konsumsi stamina saat strike minigame"
     price: 750000
     lure_level: 6
     max_weight_capacity: 60000
 
   mythic_ghostfinn_rod:
     name: "Ghostfinn Rod"
-    description: "Joran pancing khusus Ghostfinn Rod"
+    description: "Joran hantu tembus pandang berbahan sutra gaib yang menyamarkan getaran air."
     custom_model_data: 1018
     durability: 6000
     stamina_modifier: 0.2
@@ -297,14 +297,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+25% peluang tangkapan berlipat ganda"
     price: 750000
     lure_level: 6
     max_weight_capacity: 60000
 
   rare_lucky_rod:
     name: "Lucky Rod"
-    description: "Joran pancing khusus Lucky Rod"
+    description: "Joran bermata giok keberuntungan alami, meningkatkan peluang tangkapan berharga."
     custom_model_data: 1019
     durability: 1000
     stamina_modifier: 0.55
@@ -321,7 +321,7 @@ fishing_rods:
 
   rare_midnight_rod:
     name: "Midnight Rod"
-    description: "Joran pancing khusus Midnight Rod"
+    description: "Joran kayu eboni hitam legam penyerap cahaya untuk pemancing sunyi tengah malam."
     custom_model_data: 1020
     durability: 1000
     stamina_modifier: 0.55
@@ -338,7 +338,7 @@ fishing_rods:
 
   secret_diamond_rod:
     name: "Diamond Rod"
-    description: "Joran pancing khusus Diamond Rod"
+    description: "Joran berlian murni berkilau abadi, mampu menahan tarikan legenda terdalam."
     custom_model_data: 1021
     durability: 10000
     stamina_modifier: 0.15
@@ -346,14 +346,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+40% bonus nilai tangkapan dan daya tahan tak terbatas"
     price: 2000000
     lure_level: 7
     max_weight_capacity: 150000
 
   secret_element_rod:
     name: "Element Rod"
-    description: "Joran pancing khusus Element Rod"
+    description: "Joran pengendali empat elemen alam (air, api, tanah, udara) pembuka rahasia laut."
     custom_model_data: 1022
     durability: 10000
     stamina_modifier: 0.15
@@ -361,14 +361,14 @@ fishing_rods:
     allowed_tiers:
       - ALL
     special_ability: true
-    ability_description: "Peluang ekstra mendapatkan tangkapan langka"
+    ability_description: "+50% peluang membuka seluruh tier tangkapan rahasia"
     price: 2000000
     lure_level: 7
     max_weight_capacity: 150000
 
   uncommon_damascus_rod:
     name: "Damascus Rod"
-    description: "Joran pancing khusus Damascus Rod"
+    description: "Joran baja berpamor lipatan damaskus, kokoh menghadapi hempasan arus sungai deras."
     custom_model_data: 1023
     durability: 500
     stamina_modifier: 0.7
@@ -384,7 +384,7 @@ fishing_rods:
 
   uncommon_grass_rod:
     name: "Grass Rod"
-    description: "Joran pancing khusus Grass Rod"
+    description: "Joran lentur berkamuflase lumut rawa, menyamarkan kail di perairan dangkal."
     custom_model_data: 1024
     durability: 500
     stamina_modifier: 0.7
@@ -400,7 +400,7 @@ fishing_rods:
 
   uncommon_ice_rod:
     name: "Ice Rod"
-    description: "Joran pancing khusus Ice Rod"
+    description: "Joran kristal es glasier pegunungan tinggi, menjaga kail tetap dingin dan segar."
     custom_model_data: 1025
     durability: 500
     stamina_modifier: 0.7
@@ -416,7 +416,7 @@ fishing_rods:
 
   uncommon_lava_rod:
     name: "Lava Rod"
-    description: "Joran pancing khusus Lava Rod"
+    description: "Joran berlapis obsidian tahan panas lahar untuk memancing di perairan suhu tinggi."
     custom_model_data: 1026
     durability: 500
     stamina_modifier: 0.7
@@ -491,7 +491,7 @@ fishes:
   # ==========================================
   azure_damsel:
     name: "Azure Damsel"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3001
     min_weight: 0.2
@@ -503,7 +503,7 @@ fishes:
 
   clownfish:
     name: "Clownfish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3002
     min_weight: 0.2
@@ -515,7 +515,7 @@ fishes:
 
   watanabei_angelfish:
     name: "Watanabei Angelfish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3003
     min_weight: 0.2
@@ -527,7 +527,7 @@ fishes:
 
   white_tang:
     name: "White Tang"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3004
     min_weight: 0.2
@@ -539,7 +539,7 @@ fishes:
 
   pygmy_goby:
     name: "Pygmy Goby"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3005
     min_weight: 0.2
@@ -551,7 +551,7 @@ fishes:
 
   herring_fish:
     name: "Herring Fish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3006
     min_weight: 0.2
@@ -563,7 +563,7 @@ fishes:
 
   strawberry_dotty:
     name: "Strawberry Dotty"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3007
     min_weight: 0.2
@@ -575,7 +575,7 @@ fishes:
 
   copperband_butterfly:
     name: "Copperband Butterfly"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3008
     min_weight: 0.2
@@ -587,7 +587,7 @@ fishes:
 
   old_boot:
     name: "Old Boot"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: LEATHER_BOOTS
     custom_model_data: 3009
     min_weight: 0.2
@@ -599,7 +599,7 @@ fishes:
 
   yellowstate_angelfish:
     name: "Yellowstate Angelfish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3010
     min_weight: 0.2
@@ -611,7 +611,7 @@ fishes:
 
   vintage_blue_tang:
     name: "Vintage Blue Tang"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3011
     min_weight: 0.2
@@ -623,7 +623,7 @@ fishes:
 
   masked_angelfish:
     name: "Masked Angelfish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3012
     min_weight: 0.2
@@ -635,7 +635,7 @@ fishes:
 
   conspi_angelfish:
     name: "Conspi Angelfish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3013
     min_weight: 0.2
@@ -647,7 +647,7 @@ fishes:
 
   skunk_tilefish:
     name: "Skunk Tilefish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3014
     min_weight: 0.2
@@ -659,7 +659,7 @@ fishes:
 
   fade_tang:
     name: "Fade Tang"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3015
     min_weight: 0.2
@@ -671,7 +671,7 @@ fishes:
 
   reef_chromis:
     name: "Reef Chromis"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3016
     min_weight: 0.2
@@ -683,7 +683,7 @@ fishes:
 
   jennifer_dottyback:
     name: "Jennifer Dottyback"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3017
     min_weight: 0.2
@@ -695,7 +695,7 @@ fishes:
 
   zoster_butterfly:
     name: "Zoster Butterfly"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3018
     min_weight: 0.2
@@ -707,7 +707,7 @@ fishes:
 
   boa_angelfish:
     name: "Boa Angelfish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3019
     min_weight: 0.2
@@ -719,7 +719,7 @@ fishes:
 
   volcanic_basslet:
     name: "Volcanic Basslet"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3020
     min_weight: 0.2
@@ -731,7 +731,7 @@ fishes:
 
   volcano_corazon_damsel:
     name: "Volcano Corazon Damsel"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3021
     min_weight: 0.2
@@ -743,7 +743,7 @@ fishes:
 
   specked_butterfly:
     name: "Specked Butterfly"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3022
     min_weight: 0.2
@@ -755,7 +755,7 @@ fishes:
 
   sail_tang:
     name: "Sail Tang"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3023
     min_weight: 0.2
@@ -767,7 +767,7 @@ fishes:
 
   orangy_goby:
     name: "Orangy Goby"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3024
     min_weight: 0.2
@@ -779,7 +779,7 @@ fishes:
 
   ash_basslet:
     name: "Ash Basslet"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3025
     min_weight: 0.2
@@ -791,7 +791,7 @@ fishes:
 
   electric_eel:
     name: "Electric Eel"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: SALMON
     custom_model_data: 3026
     min_weight: 0.2
@@ -803,7 +803,7 @@ fishes:
 
   boar_fish:
     name: "Boar Fish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3027
     min_weight: 0.2
@@ -815,7 +815,7 @@ fishes:
 
   dead_fish:
     name: "Dead Fish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3028
     min_weight: 0.2
@@ -827,7 +827,7 @@ fishes:
 
   skeleton_fish:
     name: "Skeleton Fish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: BONE
     custom_model_data: 3029
     min_weight: 0.2
@@ -839,7 +839,7 @@ fishes:
 
   beanie_leedsicheye:
     name: "Beanie Leedsicheye"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3030
     min_weight: 0.2
@@ -851,7 +851,7 @@ fishes:
 
   runic_wispeye:
     name: "Runic Wispeye"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: PRISMARINE_SHARD
     custom_model_data: 3031
     min_weight: 0.2
@@ -863,7 +863,7 @@ fishes:
 
   waveback_fish:
     name: "Waveback Fish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: SALMON
     custom_model_data: 3032
     min_weight: 0.2
@@ -875,7 +875,7 @@ fishes:
 
   night_glider_fish:
     name: "Night Glider Fish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: COD
     custom_model_data: 3033
     min_weight: 0.2
@@ -887,7 +887,7 @@ fishes:
 
   sona_fin_fish:
     name: "Sona Fin Fish"
-    description: "Ikan umum perairan air tawar dan laut tropis"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: TROPICAL_FISH
     custom_model_data: 3034
     min_weight: 0.2
@@ -902,7 +902,7 @@ fishes:
   # ==========================================
   conch_shell:
     name: "Conch Shell"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan lincah yang hidup melimpah di perairan air tawar dan danau tropis."
     material: NAUTILUS_SHELL
     custom_model_data: 3035
     min_weight: 1.5
@@ -914,7 +914,7 @@ fishes:
 
   sea_shell:
     name: "Sea Shell"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: NAUTILUS_SHELL
     custom_model_data: 3036
     min_weight: 1.5
@@ -926,7 +926,7 @@ fishes:
 
   yellow_damselfish:
     name: "Yellow Damselfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3037
     min_weight: 1.5
@@ -938,7 +938,7 @@ fishes:
 
   gar_fish:
     name: "Gar Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3038
     min_weight: 1.5
@@ -950,7 +950,7 @@ fishes:
 
   bandit_angelfish:
     name: "Bandit Angelfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3039
     min_weight: 1.5
@@ -962,7 +962,7 @@ fishes:
 
   flame_angelfish:
     name: "Flame Angelfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3040
     min_weight: 1.5
@@ -974,7 +974,7 @@ fishes:
 
   glacerfin_snapper:
     name: "Glacerfin Snapper"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3041
     min_weight: 1.5
@@ -986,7 +986,7 @@ fishes:
 
   blue_banded_goby:
     name: "Blue-Banded Goby"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3042
     min_weight: 1.5
@@ -998,7 +998,7 @@ fishes:
 
   cypress_rauta:
     name: "Cypress Rauta"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3043
     min_weight: 1.5
@@ -1010,7 +1010,7 @@ fishes:
 
   tricolore_butterfly:
     name: "Tricolore Butterfly"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3044
     min_weight: 1.5
@@ -1022,7 +1022,7 @@ fishes:
 
   vintage_damsel:
     name: "Vintage Damsel"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3045
     min_weight: 1.5
@@ -1034,7 +1034,7 @@ fishes:
 
   purp_blisfish:
     name: "Purp Blisfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3046
     min_weight: 1.5
@@ -1046,7 +1046,7 @@ fishes:
 
   shrimp_goby:
     name: "Shrimp Goby"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3047
     min_weight: 1.5
@@ -1058,7 +1058,7 @@ fishes:
 
   bluemato_clownfish:
     name: "Bluemato Clownfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3048
     min_weight: 1.5
@@ -1070,7 +1070,7 @@ fishes:
 
   banded_butterfly:
     name: "Banded Butterfly"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3049
     min_weight: 1.5
@@ -1082,7 +1082,7 @@ fishes:
 
   arowana:
     name: "Arowana"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3050
     min_weight: 1.5
@@ -1094,7 +1094,7 @@ fishes:
 
   magma_goby:
     name: "Magma Goby"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3051
     min_weight: 1.5
@@ -1106,7 +1106,7 @@ fishes:
 
   lava_butterfly:
     name: "Lava Butterfly"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3052
     min_weight: 1.5
@@ -1118,7 +1118,7 @@ fishes:
 
   salmon:
     name: "Salmon"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3053
     min_weight: 1.5
@@ -1130,7 +1130,7 @@ fishes:
 
   flat_fish:
     name: "Flat Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3054
     min_weight: 1.5
@@ -1142,7 +1142,7 @@ fishes:
 
   flying_fish:
     name: "Flying Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: PUFFERFISH
     custom_model_data: 3055
     min_weight: 1.5
@@ -1154,7 +1154,7 @@ fishes:
 
   wahoo:
     name: "Wahoo"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3056
     min_weight: 1.5
@@ -1166,7 +1166,7 @@ fishes:
 
   maze_angelfish:
     name: "Maze Angelfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3057
     min_weight: 1.5
@@ -1178,7 +1178,7 @@ fishes:
 
   lion_fish:
     name: "Lion Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: PUFFERFISH
     custom_model_data: 3058
     min_weight: 1.5
@@ -1190,7 +1190,7 @@ fishes:
 
   rockfish:
     name: "Rockfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3059
     min_weight: 1.5
@@ -1202,7 +1202,7 @@ fishes:
 
   coal_tang:
     name: "Coal Tang"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3060
     min_weight: 1.5
@@ -1214,7 +1214,7 @@ fishes:
 
   orange_basslet:
     name: "Orange Basslet"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3061
     min_weight: 1.5
@@ -1226,7 +1226,7 @@ fishes:
 
   racoon_butterfly_fish:
     name: "Racoon Butterfly Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3062
     min_weight: 1.5
@@ -1238,7 +1238,7 @@ fishes:
 
   pilot_fish:
     name: "Pilot Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3063
     min_weight: 1.5
@@ -1250,7 +1250,7 @@ fishes:
 
   red_snapper:
     name: "Red Snapper"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3064
     min_weight: 1.5
@@ -1262,7 +1262,7 @@ fishes:
 
   blackcap_basslet:
     name: "Blackcap Basslet"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3065
     min_weight: 1.5
@@ -1274,7 +1274,7 @@ fishes:
 
   silver_tuna:
     name: "Silver Tuna"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3066
     min_weight: 1.5
@@ -1286,7 +1286,7 @@ fishes:
 
   dark_eel:
     name: "Dark Eel"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3067
     min_weight: 1.5
@@ -1298,7 +1298,7 @@ fishes:
 
   viperfish:
     name: "Viperfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3068
     min_weight: 1.5
@@ -1310,7 +1310,7 @@ fishes:
 
   spotted_lantern_fish:
     name: "Spotted Lantern Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: GLOW_INK_SAC
     custom_model_data: 3069
     min_weight: 1.5
@@ -1322,7 +1322,7 @@ fishes:
 
   swordfish:
     name: "Swordfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3070
     min_weight: 1.5
@@ -1334,7 +1334,7 @@ fishes:
 
   ancient_arapaima:
     name: "Ancient Arapaima"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3071
     min_weight: 1.5
@@ -1346,7 +1346,7 @@ fishes:
 
   apyshorn_fish:
     name: "Apyshorn Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3072
     min_weight: 1.5
@@ -1358,7 +1358,7 @@ fishes:
 
   drippy_tucanare:
     name: "Drippy Tucanare"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3073
     min_weight: 1.5
@@ -1370,7 +1370,7 @@ fishes:
 
   sail_fish:
     name: "Sail Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3074
     min_weight: 1.5
@@ -1382,7 +1382,7 @@ fishes:
 
   water_snake:
     name: "Water Snake"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: KELP
     custom_model_data: 3075
     min_weight: 1.5
@@ -1394,7 +1394,7 @@ fishes:
 
   thinkler_fish:
     name: "Thinkler Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3076
     min_weight: 1.5
@@ -1406,7 +1406,7 @@ fishes:
 
   red_goatfish:
     name: "Red Goatfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3077
     min_weight: 1.5
@@ -1418,7 +1418,7 @@ fishes:
 
   zebra_snakehead:
     name: "Zebra Snakehead"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: SALMON
     custom_model_data: 3078
     min_weight: 1.5
@@ -1430,7 +1430,7 @@ fishes:
 
   wing_parrotfish:
     name: "Wing Parrotfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3079
     min_weight: 1.5
@@ -1442,7 +1442,7 @@ fishes:
 
   foxtrot_koanfish:
     name: "Foxtrot Koanfish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3080
     min_weight: 1.5
@@ -1454,7 +1454,7 @@ fishes:
 
   doober_fish:
     name: "Doober Fish"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3081
     min_weight: 1.5
@@ -1466,7 +1466,7 @@ fishes:
 
   baby_shrimp:
     name: "Baby Shrimp"
-    description: "Spesies ikan perairan bersih berbobot sedang"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: COD
     custom_model_data: 3082
     min_weight: 1.5
@@ -1481,7 +1481,7 @@ fishes:
   # ==========================================
   korean_angelfish:
     name: "Korean Angelfish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan berkualitas tinggi dari perairan sungai deras dan pesisir pantai."
     material: TROPICAL_FISH
     custom_model_data: 3083
     min_weight: 10
@@ -1493,7 +1493,7 @@ fishes:
 
   ballina_angelfish:
     name: "Ballina Angelfish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3084
     min_weight: 10
@@ -1505,7 +1505,7 @@ fishes:
 
   barracuda_fish:
     name: "Barracuda Fish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: SALMON
     custom_model_data: 3085
     min_weight: 10
@@ -1517,7 +1517,7 @@ fishes:
 
   frog:
     name: "Frog"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: SLIME_BALL
     custom_model_data: 3086
     min_weight: 10
@@ -1529,7 +1529,7 @@ fishes:
 
   darwin_clownfish:
     name: "Darwin Clownfish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3087
     min_weight: 10
@@ -1541,7 +1541,7 @@ fishes:
 
   jewel_tang:
     name: "Jewel Tang"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: AMETHYST_SHARD
     custom_model_data: 3088
     min_weight: 10
@@ -1553,7 +1553,7 @@ fishes:
 
   candy_butterfly:
     name: "Candy Butterfly"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3089
     min_weight: 10
@@ -1565,7 +1565,7 @@ fishes:
 
   fire_goby:
     name: "Fire Goby"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: BLAZE_POWDER
     custom_model_data: 3090
     min_weight: 10
@@ -1577,7 +1577,7 @@ fishes:
 
   kau_cardinal:
     name: "Kau Cardinal"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3091
     min_weight: 10
@@ -1589,7 +1589,7 @@ fishes:
 
   rockform_cardinal:
     name: "Rockform Cardinal"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3092
     min_weight: 10
@@ -1601,7 +1601,7 @@ fishes:
 
   volsail_tang:
     name: "Volsail Tang"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3093
     min_weight: 10
@@ -1613,7 +1613,7 @@ fishes:
 
   white_clownfish:
     name: "White Clownfish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3094
     min_weight: 10
@@ -1625,7 +1625,7 @@ fishes:
 
   scissortail_dartfish:
     name: "Scissortail Dartfish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3095
     min_weight: 10
@@ -1637,7 +1637,7 @@ fishes:
 
   starfish:
     name: "Starfish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: PRISMARINE_CRYSTALS
     custom_model_data: 3096
     min_weight: 10
@@ -1649,7 +1649,7 @@ fishes:
 
   dark_tentacle:
     name: "Dark Tentacle"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: INK_SAC
     custom_model_data: 3097
     min_weight: 10
@@ -1661,7 +1661,7 @@ fishes:
 
   charmed_tang:
     name: "Charmed Tang"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3098
     min_weight: 10
@@ -1673,7 +1673,7 @@ fishes:
 
   parrot_fish:
     name: "Parrot Fish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3099
     min_weight: 10
@@ -1685,7 +1685,7 @@ fishes:
 
   catfish:
     name: "Catfish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: COD
     custom_model_data: 3100
     min_weight: 10
@@ -1697,7 +1697,7 @@ fishes:
 
   sheepshead_fish:
     name: "Sheepshead Fish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: COD
     custom_model_data: 3101
     min_weight: 10
@@ -1709,7 +1709,7 @@ fishes:
 
   coney_fish:
     name: "Coney Fish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3102
     min_weight: 10
@@ -1721,7 +1721,7 @@ fishes:
 
   jellyfish:
     name: "Jellyfish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: SLIME_BALL
     custom_model_data: 3103
     min_weight: 10
@@ -1733,7 +1733,7 @@ fishes:
 
   freshwater_piranha:
     name: "Freshwater Piranha"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: SALMON
     custom_model_data: 3104
     min_weight: 10
@@ -1745,7 +1745,7 @@ fishes:
 
   mossy_fishlet:
     name: "Mossy Fishlet"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: MOSS_BLOCK
     custom_model_data: 3105
     min_weight: 10
@@ -1757,7 +1757,7 @@ fishes:
 
   viperangler_fish:
     name: "Viperangler Fish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: PUFFERFISH
     custom_model_data: 3106
     min_weight: 10
@@ -1769,7 +1769,7 @@ fishes:
 
   boney_eel:
     name: "Boney Eel"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: BONE
     custom_model_data: 3107
     min_weight: 10
@@ -1781,7 +1781,7 @@ fishes:
 
   pirate_blue_lobster:
     name: "Pirate Blue Lobster"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: PRISMARINE_SHARD
     custom_model_data: 3108
     min_weight: 10
@@ -1793,7 +1793,7 @@ fishes:
 
   toothy_fish:
     name: "Toothy Fish"
-    description: "Ikan predator langka dengan sisik mengkilap"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: COD
     custom_model_data: 3109
     min_weight: 10
@@ -1808,7 +1808,7 @@ fishes:
   # ==========================================
   dorhey_tang:
     name: "Dorhey Tang"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Ikan eksotis lincah yang bersembunyi di balik terumbu karang dan palung."
     material: TROPICAL_FISH
     custom_model_data: 3110
     min_weight: 50
@@ -1820,7 +1820,7 @@ fishes:
 
   unicorn_tang:
     name: "Unicorn Tang"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: TROPICAL_FISH
     custom_model_data: 3111
     min_weight: 50
@@ -1832,7 +1832,7 @@ fishes:
 
   cow_clownfish:
     name: "Cow Clownfish"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: TROPICAL_FISH
     custom_model_data: 3112
     min_weight: 50
@@ -1844,7 +1844,7 @@ fishes:
 
   narwhal:
     name: "Narwhal"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: PRISMARINE_SHARD
     custom_model_data: 3113
     min_weight: 50
@@ -1856,7 +1856,7 @@ fishes:
 
   moorish_idol:
     name: "Moorish Idol"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: TROPICAL_FISH
     custom_model_data: 3114
     min_weight: 50
@@ -1868,7 +1868,7 @@ fishes:
 
   sushi_cardinal:
     name: "Sushi Cardinal"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: DRIED_KELP
     custom_model_data: 3115
     min_weight: 50
@@ -1880,7 +1880,7 @@ fishes:
 
   longnose_butterfly:
     name: "Longnose Butterfly"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: TROPICAL_FISH
     custom_model_data: 3116
     min_weight: 50
@@ -1892,7 +1892,7 @@ fishes:
 
   firecoal_damsel:
     name: "Firecoal Damsel"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: MAGMA_CREAM
     custom_model_data: 3117
     min_weight: 50
@@ -1904,7 +1904,7 @@ fishes:
 
   panther_grouper:
     name: "Panther Grouper"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: TROPICAL_FISH
     custom_model_data: 3118
     min_weight: 50
@@ -1916,7 +1916,7 @@ fishes:
 
   domino_damsel:
     name: "Domino Damsel"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: TROPICAL_FISH
     custom_model_data: 3119
     min_weight: 50
@@ -1928,7 +1928,7 @@ fishes:
 
   astra_damsel:
     name: "Astra Damsel"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: ECHO_SHARD
     custom_model_data: 3120
     min_weight: 50
@@ -1940,7 +1940,7 @@ fishes:
 
   putterfish:
     name: "Putterfish"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: PUFFERFISH
     custom_model_data: 3121
     min_weight: 50
@@ -1952,7 +1952,7 @@ fishes:
 
   vampire_squid:
     name: "Vampire Squid"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: GLOW_INK_SAC
     custom_model_data: 3122
     min_weight: 50
@@ -1964,7 +1964,7 @@ fishes:
 
   monk_fish:
     name: "Monk Fish"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: PUFFERFISH
     custom_model_data: 3123
     min_weight: 50
@@ -1976,7 +1976,7 @@ fishes:
 
   spear_guardian:
     name: "Spear Guardian"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: PRISMARINE_SHARD
     custom_model_data: 3124
     min_weight: 50
@@ -1988,7 +1988,7 @@ fishes:
 
   goliath_tiger:
     name: "Goliath Tiger"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: SALMON
     custom_model_data: 3125
     min_weight: 50
@@ -2000,7 +2000,7 @@ fishes:
 
   skeleton_angler_fish:
     name: "Skeleton Angler Fish"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: BONE
     custom_model_data: 3126
     min_weight: 50
@@ -2012,7 +2012,7 @@ fishes:
 
   blobby_shieldfish:
     name: "Blobby Shieldfish"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: SHIELD
     custom_model_data: 3127
     min_weight: 50
@@ -2024,7 +2024,7 @@ fishes:
 
   angrylion_fish:
     name: "Angrylion Fish"
-    description: "Spesies epik perairan dalam dengan tenaga tarikan kuat"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: PUFFERFISH
     custom_model_data: 3128
     min_weight: 50
@@ -2039,7 +2039,7 @@ fishes:
   # ==========================================
   lined_cardinal_fish:
     name: "Lined Cardinal Fish"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Predator perairan dalam berbobot masif dengan tenaga tarikan luar biasa."
     material: TROPICAL_FISH
     custom_model_data: 3129
     min_weight: 200
@@ -2051,7 +2051,7 @@ fishes:
 
   yellowfin_tuna:
     name: "Yellowfin Tuna"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: SALMON
     custom_model_data: 3130
     min_weight: 200
@@ -2063,7 +2063,7 @@ fishes:
 
   lake_sturgeon:
     name: "Lake Sturgeon"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: SALMON
     custom_model_data: 3131
     min_weight: 200
@@ -2075,7 +2075,7 @@ fishes:
 
   bumblebee_grouper:
     name: "Bumblebee Grouper"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: TROPICAL_FISH
     custom_model_data: 3132
     min_weight: 200
@@ -2087,7 +2087,7 @@ fishes:
 
   lobster:
     name: "Lobster"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: PRISMARINE_SHARD
     custom_model_data: 3133
     min_weight: 200
@@ -2099,7 +2099,7 @@ fishes:
 
   lavafin_tuna:
     name: "Lavafin Tuna"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: FIRE_CHARGE
     custom_model_data: 3134
     min_weight: 200
@@ -2111,7 +2111,7 @@ fishes:
 
   chrome_tuna:
     name: "Chrome Tuna"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: IRON_INGOT
     custom_model_data: 3135
     min_weight: 200
@@ -2123,7 +2123,7 @@ fishes:
 
   starjam_tang:
     name: "Starjam Tang"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: NETHER_STAR
     custom_model_data: 3136
     min_weight: 200
@@ -2135,7 +2135,7 @@ fishes:
 
   greenbee_grouper:
     name: "Greenbee Grouper"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: TROPICAL_FISH
     custom_model_data: 3137
     min_weight: 200
@@ -2147,7 +2147,7 @@ fishes:
 
   blue_lobster:
     name: "Blue Lobster"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: LAPIS_LAZULI
     custom_model_data: 3138
     min_weight: 200
@@ -2159,7 +2159,7 @@ fishes:
 
   enchanted_angelfish:
     name: "Enchanted Angelfish"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: EXPERIENCE_BOTTLE
     custom_model_data: 3139
     min_weight: 200
@@ -2171,7 +2171,7 @@ fishes:
 
   magic_tang:
     name: "Magic Tang"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: AMETHYST_CLUSTER
     custom_model_data: 3140
     min_weight: 200
@@ -2183,7 +2183,7 @@ fishes:
 
   ruby:
     name: "Ruby"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: REDSTONE
     custom_model_data: 3141
     min_weight: 200
@@ -2195,7 +2195,7 @@ fishes:
 
   axolotl:
     name: "Axolotl"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: TROPICAL_FISH
     custom_model_data: 3142
     min_weight: 200
@@ -2207,7 +2207,7 @@ fishes:
 
   synodontis:
     name: "Synodontis"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: COD
     custom_model_data: 3143
     min_weight: 200
@@ -2219,7 +2219,7 @@ fishes:
 
   deep_sea_crab:
     name: "Deep Sea Crab"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: NAUTILUS_SHELL
     custom_model_data: 3144
     min_weight: 200
@@ -2231,7 +2231,7 @@ fishes:
 
   temple_spokes_tuna:
     name: "Temple Spokes Tuna"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: PRISMARINE_CRYSTALS
     custom_model_data: 3145
     min_weight: 200
@@ -2243,7 +2243,7 @@ fishes:
 
   manoai_statue_fish:
     name: "Manoai Statue Fish"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: STONE
     custom_model_data: 3146
     min_weight: 200
@@ -2255,7 +2255,7 @@ fishes:
 
   primal_lobster:
     name: "Primal Lobster"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: PRISMARINE_SHARD
     custom_model_data: 3147
     min_weight: 200
@@ -2267,7 +2267,7 @@ fishes:
 
   runic_lobster:
     name: "Runic Lobster"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: ECHO_SHARD
     custom_model_data: 3148
     min_weight: 200
@@ -2279,7 +2279,7 @@ fishes:
 
   ancient_pufferfish:
     name: "Ancient Pufferfish"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: PUFFERFISH
     custom_model_data: 3149
     min_weight: 200
@@ -2291,7 +2291,7 @@ fishes:
 
   primal_axolotl:
     name: "Primal Axolotl"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: HEART_OF_THE_SEA
     custom_model_data: 3150
     min_weight: 200
@@ -2303,7 +2303,7 @@ fishes:
 
   runic_axolotl:
     name: "Runic Axolotl"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: ECHO_SHARD
     custom_model_data: 3151
     min_weight: 200
@@ -2315,7 +2315,7 @@ fishes:
 
   flying_manta:
     name: "Flying Manta"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: PHANTOM_MEMBRANE
     custom_model_data: 3152
     min_weight: 200
@@ -2327,7 +2327,7 @@ fishes:
 
   evolved_enchant_stone:
     name: "Evolved Enchant Stone"
-    description: "Ikan legendaris raksasa penjaga palung samudra"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: ENCHANTED_BOOK
     custom_model_data: 3153
     min_weight: 200
@@ -2342,7 +2342,7 @@ fishes:
   # ==========================================
   dotted_stingray:
     name: "Dotted Stingray"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Tangkapan langka prestisius dengan sisik keemasan yang bernilai tinggi."
     material: HEART_OF_THE_SEA
     custom_model_data: 3154
     min_weight: 1000
@@ -2354,7 +2354,7 @@ fishes:
 
   manta_ray:
     name: "Manta Ray"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: PHANTOM_MEMBRANE
     custom_model_data: 3155
     min_weight: 1000
@@ -2366,7 +2366,7 @@ fishes:
 
   hammerhead_shark:
     name: "Hammerhead Shark"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: PRISMARINE_SHARD
     custom_model_data: 3156
     min_weight: 1000
@@ -2378,7 +2378,7 @@ fishes:
 
   loggerhead_turtle:
     name: "Loggerhead Turtle"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: TURTLE_SCUTE
     custom_model_data: 3157
     min_weight: 1000
@@ -2390,7 +2390,7 @@ fishes:
 
   shark:
     name: "Shark"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: PRISMARINE_SHARD
     custom_model_data: 3158
     min_weight: 1000
@@ -2402,7 +2402,7 @@ fishes:
 
   frostglow_globe_jelly:
     name: "Frostglow Globe Jelly"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: SEA_LANTERN
     custom_model_data: 3159
     min_weight: 1000
@@ -2414,7 +2414,7 @@ fishes:
 
   prismy_seahorse:
     name: "Prismy Seahorse"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: PRISMARINE_CRYSTALS
     custom_model_data: 3160
     min_weight: 1000
@@ -2426,7 +2426,7 @@ fishes:
 
   blueflame_ray:
     name: "Blueflame Ray"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: SOUL_CAMPFIRE
     custom_model_data: 3161
     min_weight: 1000
@@ -2438,7 +2438,7 @@ fishes:
 
   magma_shark:
     name: "Magma Shark"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: MAGMA_BLOCK
     custom_model_data: 3162
     min_weight: 1000
@@ -2450,7 +2450,7 @@ fishes:
 
   hawks_turtle:
     name: "Hawks Turtle"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: TURTLE_SCUTE
     custom_model_data: 3163
     min_weight: 1000
@@ -2462,7 +2462,7 @@ fishes:
 
   thresher_shark:
     name: "Thresher Shark"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: PRISMARINE_SHARD
     custom_model_data: 3164
     min_weight: 1000
@@ -2474,7 +2474,7 @@ fishes:
 
   abyss_seahorse:
     name: "Abyss Seahorse"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: ECHO_SHARD
     custom_model_data: 3165
     min_weight: 1000
@@ -2486,7 +2486,7 @@ fishes:
 
   blob_fish:
     name: "Blob Fish"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: SLIME_BALL
     custom_model_data: 3166
     min_weight: 1000
@@ -2498,7 +2498,7 @@ fishes:
 
   crocodile:
     name: "Crocodile"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: LEATHER
     custom_model_data: 3167
     min_weight: 1000
@@ -2510,7 +2510,7 @@ fishes:
 
   sea_crustacean:
     name: "Sea Crustacean"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: NAUTILUS_SHELL
     custom_model_data: 3168
     min_weight: 1000
@@ -2522,7 +2522,7 @@ fishes:
 
   runic_sea_crustacean:
     name: "Runic Sea Crustacean"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: ECHO_SHARD
     custom_model_data: 3169
     min_weight: 1000
@@ -2534,7 +2534,7 @@ fishes:
 
   ancient_squid:
     name: "Ancient Squid"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: GLOW_INK_SAC
     custom_model_data: 3170
     min_weight: 1000
@@ -2546,7 +2546,7 @@ fishes:
 
   runic_squid:
     name: "Runic Squid"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: ECHO_SHARD
     custom_model_data: 3171
     min_weight: 1000
@@ -2558,7 +2558,7 @@ fishes:
 
   cavern_dweller:
     name: "Cavern Dweller"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: DEEPSLATE
     custom_model_data: 3172
     min_weight: 1000
@@ -2570,7 +2570,7 @@ fishes:
 
   primordial_octopus:
     name: "Primordial Octopus"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: HEART_OF_THE_SEA
     custom_model_data: 3173
     min_weight: 1000
@@ -2582,7 +2582,7 @@ fishes:
 
   flatheaded_whale_shark:
     name: "Flatheaded Whale Shark"
-    description: "Entitas laut purba sakral penakluk ombak samudera"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: PRISMARINE_SHARD
     custom_model_data: 3174
     min_weight: 1000
@@ -2597,7 +2597,7 @@ fishes:
   # ==========================================
   crystal_crab:
     name: "Crystal Crab"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Entitas berkilau mistis yang memancarkan aura magis di kedalaman laut."
     material: AMETHYST_CLUSTER
     custom_model_data: 3175
     min_weight: 2000
@@ -2609,7 +2609,7 @@ fishes:
 
   orca:
     name: "Orca"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: HEART_OF_THE_SEA
     custom_model_data: 3176
     min_weight: 2000
@@ -2621,7 +2621,7 @@ fishes:
 
   blob_shark:
     name: "Blob Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: SLIME_BALL
     custom_model_data: 3177
     min_weight: 2000
@@ -2633,7 +2633,7 @@ fishes:
 
   ghost_shark:
     name: "Ghost Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: GHAST_TEAR
     custom_model_data: 3178
     min_weight: 2000
@@ -2645,7 +2645,7 @@ fishes:
 
   skeleton_narwhal:
     name: "Skeleton Narwhal"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: BONE
     custom_model_data: 3179
     min_weight: 2000
@@ -2657,7 +2657,7 @@ fishes:
 
   ghost_worm_fish:
     name: "Ghost Worm Fish"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: PHANTOM_MEMBRANE
     custom_model_data: 3180
     min_weight: 2000
@@ -2669,7 +2669,7 @@ fishes:
 
   worm_fish:
     name: "Worm Fish"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: STRING
     custom_model_data: 3181
     min_weight: 2000
@@ -2681,7 +2681,7 @@ fishes:
 
   megalodon:
     name: "Megalodon"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: NETHER_STAR
     custom_model_data: 3182
     min_weight: 2000
@@ -2693,7 +2693,7 @@ fishes:
 
   1x1x1x1_comet_shark:
     name: "1x1x1x1 Comet Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: NETHER_STAR
     custom_model_data: 3183
     min_weight: 2000
@@ -2705,7 +2705,7 @@ fishes:
 
   bloodmoon_whale:
     name: "Bloodmoon Whale"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: REDSTONE_BLOCK
     custom_model_data: 3184
     min_weight: 2000
@@ -2717,7 +2717,7 @@ fishes:
 
   lochness_monster:
     name: "Lochness Monster"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: HEART_OF_THE_SEA
     custom_model_data: 3185
     min_weight: 2000
@@ -2729,7 +2729,7 @@ fishes:
 
   monster_shark:
     name: "Monster Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: NETHER_STAR
     custom_model_data: 3186
     min_weight: 2000
@@ -2741,7 +2741,7 @@ fishes:
 
   eerie_shark:
     name: "Eerie Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: ECHO_SHARD
     custom_model_data: 3187
     min_weight: 2000
@@ -2753,7 +2753,7 @@ fishes:
 
   great_whale:
     name: "Great Whale"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: HEART_OF_THE_SEA
     custom_model_data: 3188
     min_weight: 2000
@@ -2765,7 +2765,7 @@ fishes:
 
   frostborn_shark:
     name: "Frostborn Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: BLUE_ICE
     custom_model_data: 3189
     min_weight: 2000
@@ -2777,7 +2777,7 @@ fishes:
 
   armored_shark:
     name: "Armored Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: NETHERITE_INGOT
     custom_model_data: 3190
     min_weight: 2000
@@ -2789,7 +2789,7 @@ fishes:
 
   scare:
     name: "Scare"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: JACK_O_LANTERN
     custom_model_data: 3191
     min_weight: 2000
@@ -2801,7 +2801,7 @@ fishes:
 
   queen_crab:
     name: "Queen Crab"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: NAUTILUS_SHELL
     custom_model_data: 3192
     min_weight: 2000
@@ -2813,7 +2813,7 @@ fishes:
 
   king_crab:
     name: "King Crab"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: NAUTILUS_SHELL
     custom_model_data: 3193
     min_weight: 2000
@@ -2825,7 +2825,7 @@ fishes:
 
   cryoshade_glider:
     name: "Cryoshade Glider"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: PACKED_ICE
     custom_model_data: 3194
     min_weight: 2000
@@ -2837,7 +2837,7 @@ fishes:
 
   panther_eel:
     name: "Panther Eel"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: BLACK_DYE
     custom_model_data: 3195
     min_weight: 2000
@@ -2849,7 +2849,7 @@ fishes:
 
   giant_squid:
     name: "Giant Squid"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: GLOW_INK_SAC
     custom_model_data: 3196
     min_weight: 2000
@@ -2861,7 +2861,7 @@ fishes:
 
   depthseeker_ray:
     name: "Depthseeker Ray"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: ECHO_SHARD
     custom_model_data: 3197
     min_weight: 2000
@@ -2873,7 +2873,7 @@ fishes:
 
   robot_kraken:
     name: "Robot Kraken"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: BEACON
     custom_model_data: 3198
     min_weight: 2000
@@ -2885,7 +2885,7 @@ fishes:
 
   mosasaur_shark:
     name: "Mosasaur Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: PRISMARINE_CRYSTALS
     custom_model_data: 3199
     min_weight: 2000
@@ -2897,7 +2897,7 @@ fishes:
 
   king_jelly:
     name: "King Jelly"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: SLIME_BLOCK
     custom_model_data: 3200
     min_weight: 2000
@@ -2909,7 +2909,7 @@ fishes:
 
   bone_whale:
     name: "Bone Whale"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: BONE_BLOCK
     custom_model_data: 3201
     min_weight: 2000
@@ -2921,7 +2921,7 @@ fishes:
 
   elshark_gran_maja:
     name: "Elshark Gran Maja"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: NETHER_STAR
     custom_model_data: 3202
     min_weight: 2000
@@ -2933,7 +2933,7 @@ fishes:
 
   ancient_whale:
     name: "Ancient Whale"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: HEART_OF_THE_SEA
     custom_model_data: 3203
     min_weight: 2000
@@ -2945,7 +2945,7 @@ fishes:
 
   gladiator_shark:
     name: "Gladiator Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: NETHERITE_SWORD
     custom_model_data: 3204
     min_weight: 2000
@@ -2957,7 +2957,7 @@ fishes:
 
   ancient_lochness_monster:
     name: "Ancient Lochness Monster"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: HEART_OF_THE_SEA
     custom_model_data: 3205
     min_weight: 2000
@@ -2969,7 +2969,7 @@ fishes:
 
   talon_serpent:
     name: "Talon Serpent"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: PRISMARINE_SHARD
     custom_model_data: 3206
     min_weight: 2000
@@ -2981,7 +2981,7 @@ fishes:
 
   strawberry_choc_megalodon:
     name: "Strawberry Choc Megalodon"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: COCOA_BEANS
     custom_model_data: 3207
     min_weight: 2000
@@ -2993,7 +2993,7 @@ fishes:
 
   krampus_shark:
     name: "Krampus Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: COAL_BLOCK
     custom_model_data: 3208
     min_weight: 2000
@@ -3005,7 +3005,7 @@ fishes:
 
   emerald_winter_whale:
     name: "Emerald Winter Whale"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: EMERALD_BLOCK
     custom_model_data: 3209
     min_weight: 2000
@@ -3017,7 +3017,7 @@ fishes:
 
   winter_frost_shark:
     name: "Winter Frost Shark"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: ICE
     custom_model_data: 3210
     min_weight: 2000
@@ -3029,7 +3029,7 @@ fishes:
 
   icebreaker_whale:
     name: "Icebreaker Whale"
-    description: "Keajaiban laut rahasia yang melegenda di seluruh penjuru dunia"
+    description: "Spesies purba legendaris yang terkubur dalam mitos samudra terdalam."
     material: BLUE_ICE
     custom_model_data: 3211
     min_weight: 2000

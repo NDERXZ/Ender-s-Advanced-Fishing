@@ -249,7 +249,7 @@ public class TournamentManager {
             public void run() {
                 broadcastLeaderboard(false);
             }
-        }.runTaskTimer(plugin, 20L * 60L * 2L, 20L * 60L * 2L);
+        }.runTaskTimer(plugin, 20L * 60L * 5L, 20L * 60L * 5L);
         
         // Jadwalkan task untuk mengakhiri turnamen
         endTask = new BukkitRunnable() {

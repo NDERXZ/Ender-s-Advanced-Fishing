@@ -44,6 +44,10 @@ public class SeaMonsterManager implements Listener {
         Location spawnLoc = location.clone().add(0, 0.5, 0);
         if (spawnLoc.getWorld() == null) return false;
 
+        // Check if mob spawning is allowed in region (WorldGuard / RedProtect)
+        if (!isMobSpawningAllowed(spawnLoc)) {
+            return false;
+        }
         // Visual lightning effect (does not ignite fire)
         spawnLoc.getWorld().strikeLightningEffect(spawnLoc);
         spawnLoc.getWorld().playSound(spawnLoc, Sound.ENTITY_ELDER_GUARDIAN_CURSE, 1.2f, 0.8f);
@@ -97,8 +101,12 @@ public class SeaMonsterManager implements Listener {
         if (!entity.hasMetadata(METADATA_KEY)) return;
 
         Player killer = entity.getKiller();
+        if (killer == null) {
+            event.getDrops().clear();
+            return;
+        }
 
-        // Guaranteed sea treasures
+        // Guaranteed sea treasures on player kill
         event.getDrops().add(new ItemStack(Material.HEART_OF_THE_SEA, 1));
         event.getDrops().add(new ItemStack(Material.PRISMARINE_CRYSTALS, 4));
         event.getDrops().add(new ItemStack(Material.NAUTILUS_SHELL, 2));
@@ -118,5 +126,24 @@ public class SeaMonsterManager implements Listener {
                 plugin.getSkillManager().addFishingExp(killer, 500);
             }
         }
+    }
+
+    private boolean isMobSpawningAllowed(Location loc) {
+        try {
+            if (org.bukkit.Bukkit.getPluginManager().isPluginEnabled("WorldGuard")) {
+                Class<?> wgClass = Class.forName("com.sk89q.worldguard.WorldGuard");
+                Object wgInstance = wgClass.getMethod("getInstance").invoke(null);
+                Object platform = wgClass.getMethod("getPlatform").invoke(wgInstance);
+                Object container = platform.getClass().getMethod("getRegionContainer").invoke(platform);
+                Object query = container.getClass().getMethod("createQuery").invoke(container);
+                Class<?> adapterClass = Class.forName("com.sk89q.worldedit.bukkit.BukkitAdapter");
+                Object weLoc = adapterClass.getMethod("adapt", Location.class).invoke(null, loc);
+                Class<?> flagsClass = Class.forName("com.sk89q.worldguard.protection.flags.Flags");
+                Object mobSpawnFlag = flagsClass.getField("MOB_SPAWNING").get(null);
+                Object res = query.getClass().getMethod("queryValue", weLoc.getClass(), Class.forName("com.sk89q.worldguard.protection.association.RegionAssociable"), Class.forName("com.sk89q.worldguard.protection.flags.Flag")).invoke(query, weLoc, null, mobSpawnFlag);
+                if (Boolean.FALSE.equals(res)) return false;
+            }
+        } catch (Throwable ignored) {}
+        return true;
     }
 }

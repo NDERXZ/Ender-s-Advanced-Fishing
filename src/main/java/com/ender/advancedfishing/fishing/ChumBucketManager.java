@@ -155,9 +155,14 @@ public class ChumBucketManager implements Listener {
 
         event.setCancelled(true);
 
-        // Deduct 1 item
+        // Deduct 1 item and return empty bucket
         if (item.getAmount() > 1) {
             item.setAmount(item.getAmount() - 1);
+            ItemStack emptyBucket = new ItemStack(Material.BUCKET);
+            Map<Integer, ItemStack> leftover = player.getInventory().addItem(emptyBucket);
+            if (!leftover.isEmpty()) {
+                player.getWorld().dropItemNaturally(player.getLocation(), emptyBucket);
+            }
         } else {
             player.getInventory().setItemInMainHand(new ItemStack(Material.BUCKET));
         }

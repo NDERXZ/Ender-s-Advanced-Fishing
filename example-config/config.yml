@@ -16,6 +16,7 @@ auraskills:
     EPIC: 4.0
     LEGENDARY: 7.0
     MYTHIC: 12.0
+    SECRET: 20.0
 
 # Auto-Fishing / AFK Fishing Settings (/eaf afk)
 # Format luck-nerf dan speed-nerf menggunakan format <angka>%
@@ -36,6 +37,7 @@ tier_colors:
     EPIC: "&5"
     LEGENDARY: "&6"
     MYTHIC: "&c"
+    SECRET: "&4"
   rod:
     BASIC: "&7"
     INTERMEDIATE: "&a"
@@ -43,6 +45,19 @@ tier_colors:
     EXPERT: "&5"
     MASTER: "&6"
     MYTHIC: "&c"
+    SECRET: "&4"
+
+# Pengaturan dimensi memancing
+# Hanya di dimensi / world yang terdaftar, sistem pancingan custom & minigame akan aktif.
+# Di luar dimensi ini, memancing 100% menggunakan mekanik dan tangkapan vanilla biasa.
+dimensions:
+  allowed_types:
+    - NORMAL # Dimensi Overworld
+    # - NETHER
+    # - THE_END
+  # Daftar nama world spesifik (kosong = semua world dengan tipe di atas).
+  # Contoh untuk server dengan Multiverse-Core: [overworld, survival] (jika ingin mengecualikan world spawn / minigame).
+  allowed_worlds: []
 
 # Economy settings
 economy:

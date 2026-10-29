@@ -91,12 +91,16 @@ public class FishingListener implements Listener {
     public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         
-        // Handle left-click during minigame
-        if (event.getAction() == org.bukkit.event.block.Action.LEFT_CLICK_AIR || 
-            event.getAction() == org.bukkit.event.block.Action.LEFT_CLICK_BLOCK) {
-            ItemStack heldItem = player.getInventory().getItemInMainHand();
-            
-            if (heldItem.getType() == Material.FISHING_ROD) {
+        ItemStack heldItem = player.getInventory().getItemInMainHand();
+        if (heldItem.getType() == Material.FISHING_ROD) {
+            // Support both left-click (Java) and right-click/tap (Bedrock/Geyser) while in minigame
+            if (isPlayerInMinigame(player)) {
+                if (strikeMinigame.handleClick(player)) {
+                    event.setCancelled(true);
+                    return;
+                }
+            } else if (event.getAction() == org.bukkit.event.block.Action.LEFT_CLICK_AIR || 
+                       event.getAction() == org.bukkit.event.block.Action.LEFT_CLICK_BLOCK) {
                 if (strikeMinigame.handleClick(player)) {
                     event.setCancelled(true);
                 }
@@ -111,9 +115,10 @@ public class FishingListener implements Listener {
         }
         Player player = event.getPlayer();
         
-        // IMMEDIATELY cancel ANY fishing events if player is in a minigame - check first before anything else
+        // If player is in a minigame, treat reel-in as strike progress (crucial for Bedrock/Geyser & Controller)
         if (isPlayerInMinigame(player)) {
             event.setCancelled(true);
+            strikeMinigame.handleClick(player);
             return;
         }
         
